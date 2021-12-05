@@ -2,6 +2,10 @@
     border: 1px solid black;
 } */
 
+body {
+    font-family: 'Poppins';
+}
+
 .main {
     position: absolute;
     top: 0;
@@ -10,14 +14,14 @@
 }
 
 .navbar {
-    position: absolute;
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* z-index: 2000; */
+    z-index: 2000;
     height: 100px;
     width: 90%;
-    background-color: #FF652F;
+    background-color: rgb(0, 0, 0);
     padding: 0 5%;
 }
 
@@ -41,6 +45,8 @@
 .name a {
     text-decoration: none;
     color: white;
+    text-shadow: 5px 5px 10px  gray;
+
 }
 
 .nav-links {
@@ -57,23 +63,95 @@
     font-size: 36px;
     font-weight: bold;
     color: white;
+    text-shadow: 5px 5px 10px  gray;
 }
 
 .dropmenu {
     display: none;
 }
 
-@media screen and (max-width: 1476px) {
+.homePage {
+    height: 700px;
+    z-index: auto;
+    background:linear-gradient(to bottom, white 20%, rgb(170, 170, 170));
+}
+
+.tesla {
+    max-height: 700px;
+    width: 60%;
+    content: url(../images/tesla.png);
+    padding-right: 5%;
+}
+
+.register {
+    width: 30%;
+    border-radius: 15px;
+    text-align: center;
+    background: linear-gradient(to top, rgb(229, 255, 0), rgb(168, 154, 22));
+    box-shadow: 5px 5px 25px black;
+}
+
+.inputs {
+    margin: 0 10px 10px;
+}
+
+.inputs label {
+    width: 95%;
+    margin: 0 3px;
+}
+
+.inputs input{
+    width: 100%;
+    border: 2px double rgb(115, 153, 38);
+    border-radius: 5px;
+    background-color: rgba(0, 17, 255, 0.35);
+    box-shadow: 2px 2px 15px white;
+}
+
+.info {
+    display: flex;
+}
+
+.info input {
+    width: 95%;
+}
+
+/* Submit Button DIV */
+.submit {
+    width: 100%;
+    margin: 40px 0 20px;
+}
+
+/* Submit Button design */
+.submit input {
+    width: 50%;
+    height: 30px;
+    background-image: linear-gradient(to right, rgb(255, 122, 122), rgb(255, 255, 0), #00ffff, #ffff00);
+    border: 2px solid red;
+    border-radius: 15px;
+    box-shadow: 0 4px 3px rgb(192, 194, 56);
+    background-size: 300% ;
+    transition: ease-in-out;
+    transition: box-shadow 0.1s, border-color 0.1s, transform 0.1s, background-position 0.7s;
+    
+}
+    .submit input:hover {
+        background-position: 100% 0;
+        border-color: rgb(175, 0, 0);
+    }
+    .submit input:active {
+        box-shadow: 0 2px 3px rgb(143, 145, 42);
+        transform: translateY(2px);
+    }
+
+@media screen and (max-width: 1578px) {
     .nav-links {
         display: none;
     }
 
     .dropmenu{
-        display: inline;
+        display: block;
         font-weight: bold;
-        text-align: center;
-        color: white;
-        border-radius: 5px;
         margin-right: 50px;
     }
     #menu {
@@ -81,52 +159,42 @@
         width: 60px;
         border-radius: 5px;
     }
-    
-    .dropmenu:hover {
-        background-color: #FF452F;
-    }
-    
+
     .dropbtn {
-        display: none;
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        text-align: center;
-        width: 25%;
+        /* display: none; */
         position: absolute;
+        margin: 0;
+        right: 0;
+        top: 0;
+        z-index: 1;
+        height: auto;
+        width: 0;
+        transition: 0.3s;
+        background-color: #542321;
+        list-style-type: none;
+        border-radius: 0 0 0 35px;
+        text-align: left;
+        padding: 0;
     }
     
     .dropbtn li {
-        background-color: white;
-        border: 2px solid #FF452F;
-        border-top: 0;
-        border-radius: 5px;
-        padding: 10px 0;
-        transition: 0.2s ease-in-out;
+        margin: 25px 20px;
     }
-
-    #borderHome {
-        border-top: 2px solid #FF452F;
-    }
-
-    .dropbtn li a {
+    
+    .dropbtn li a{
         text-decoration: none;
-        color: black;
-        font-size: 24px;
-        transition: 0.2s ease-in-out;
-    }
-
-    .dropbtn li:hover a {
-        color: white;
-    }
-
-    .dropbtn li:hover{
-        background-color: #FF652F;
-    }
-
-    .dropmenu:hover .dropbtn{
+        color: #818181;
         display: block;
-        position: absolute;
-        right: 9%;
+        width: auto;
+        padding: 8px 8px 8px 32px;
+    }
+
+    #closeButton {
+        text-align: right;
+        color: rgb(216, 216, 216);
+    }
+
+    .info {
+        display: block;
     }
 }

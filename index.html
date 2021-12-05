@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <title>Final Project</title>
     <link rel="stylesheet" href="CSS/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <script src="js/index.js"></script>
 </head>
 <body>
     <div class="main">
@@ -24,19 +28,56 @@
                 <div class="nav-link reservations"><a href="reservations.html">Reservations</a></div>  
                 <div class="nav-link how"><a href="howTo.html">How To</a></div>  
             </div>
-            <!-- width<1476px vjen qikjo -->
-            <nav class="dropmenu"> <div id="menu"></div>
-                <ul class="dropbtn">
+            <!-- width<1578px vjen qikjo -->
+            <nav  class="dropmenu" > <a href="javascript:void(0);" onclick="showMenu()"><div id="menu"></div></a>
+                <ul id="mobileMenu" class="dropbtn">
+                    <li><a href="javascript:void(0);" onclick="closeMenu()" id="closeButton">X</a></li>
                     <li id="borderHome"><a href="index.html">Home</a></li>
                     <li><a href="about.html">About Us</a></li>
                     <li><a href="cars.html">Cars</a></li>
-                    <li><a href="reserevations.html">Reservations</a></li>
+                    <li><a href="reservations.html">Reservations</a></li>
                     <li><a href="howTo.html">How To</a></li>
                 </ul>
             </nav>
         </div>
-        <div style="position: relative; top: 150px;">
-            <h1>Home</h1>
+        <!-- navbar has no connection with the div below but the css code is reused, hence the "navbar" class -->
+        <div class="navbar homePage">
+            <div class="register">
+                <!-- ADD A ACTION  -->
+                <form method="get" action="reservations.html">
+                    <h3>Register</h3>
+                    <div class="inputs info">
+                        <label>Name
+                            <input type="text">
+                        </label>
+                        <label>Surname
+                            <input type="text">
+                        </label>
+                    </div>
+                    <div class="inputs info">
+                        <label> Pick-up Location
+                            <input id="location" type="text">
+                        </label>
+                        <label> Drop-off Location
+                            <input type="text">
+                        </label>
+                    </div>
+                    <div class="inputs info">
+                        <label>Pick-up Date
+                            <input type="date">
+                        </label>
+                        <label>Drop-off Date
+                            <input type="date">
+                        </label>
+                    </div>
+                    <div class="submit">
+                        <input type="submit" value="Search For Available Car">
+                    </div>
+                </form>
+            </div>
+            <div class="tesla">
+                <!-- Empty div for adding the image through CSS -->
+            </div>
         </div>
     </div>
 
