@@ -1,0 +1,58 @@
+/* div {
+    border: 1px solid black;
+} */
+
+.main {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2000;
+    height: 100px;
+    background-color: #FF652F;;
+    padding: 0 5%;
+}
+
+.nav-logo {
+    display: inherit;
+    height: inherit;
+}
+
+.logo {
+    display: inherit;
+}
+.image {
+    content: url(../images/logo.png);
+}
+.name {
+    font-size: 36px;
+    margin: 0 25px;
+    padding: 8% 0;
+}
+
+.name a {
+    text-decoration: none;
+    color: white;
+}
+
+.nav-links {
+    display: flex;
+}
+
+.nav-link {
+    margin: 0 25px;
+    padding: 20px 0;
+}
+
+.nav-link a {
+    text-decoration: none;
+    font-size: 36px;
+    font-weight: bold;
+    color: white;
+}
