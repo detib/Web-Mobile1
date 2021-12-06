@@ -1,0 +1,90 @@
+html {
+    scroll-behavior:smooth;
+}
+
+.face {
+    content: url(../images/face.png);
+    width: 50px;
+}
+
+.linkedin {
+    content: url(../images/linkedin.png);
+    width: 50px;
+}
+
+.twitter {
+    content: url(../images/twitter.png);
+    width: 50px;
+}
+
+.footer {
+    position: relative;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    width: 90%;
+    margin-top: 5%;
+    padding: 2% 5%;
+    background-color: #3d3d3d;
+    align-items: center;
+}
+.copyright {
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+}
+
+.copyrightName {
+    padding: 0;
+    margin: 0;
+    color: white;
+}
+
+
+.copyrightName a {
+    text-decoration: underline;
+    color: white;
+}
+
+.name a {
+    text-decoration: none;
+}
+.images {
+    width: 15%;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.toTopButtonDesign {
+    background-color: rgb(61, 61, 61, 0.5);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: fixed;
+    bottom: 110px;
+    right: 20px;
+    margin: 0;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+}
+
+#scrollToTopButton {
+    /* display: none; */
+}
+
+.toTopButtonImage {
+    content: url(../images/arrowup.png);
+    margin: 0;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+}
+
+@media screen and (max-width: 1400px){
+    .images {
+        width: 20%;
+    }
+}

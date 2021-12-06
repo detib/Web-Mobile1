@@ -2,6 +2,7 @@
     border: 1px solid black;
 } */
 
+
 body {
     font-family: 'Poppins';
 }
@@ -81,7 +82,13 @@ body {
 .homePage {
     height: 700px;
     z-index: auto;
-    background:linear-gradient(to bottom, rgb(170, 170, 170), white);
+    background: linear-gradient(to bottom, rgb(170, 170, 170), white);
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    padding: 0 5%;
+    align-items: center;
 }
 
 .tesla {

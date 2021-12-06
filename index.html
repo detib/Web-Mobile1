@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Final Project</title>
     <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="css/footer.css">
     <script src="js/index.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <div class="main">
-        <div class="navbar">
+        <div class="navbar" id="top">
             <div class="nav-logo">
                 <div class="logo">
                     <a href="index.html" class="image"></a>
@@ -22,14 +25,16 @@
             </div>
             <div class="nav-links">
                 <!-- nese nuk vyjn in the future delete extra classes -->
-                <div class="nav-link home"><a href="index.html">Home</a></div>  
-                <div class="nav-link about"><a href="about.html">About Us</a></div>  
-                <div class="nav-link cars"><a href="cars.html">Cars</a></div>  
-                <div class="nav-link reservations"><a href="reservations.html">Reservations</a></div>  
-                <div class="nav-link how"><a href="howTo.html">How To</a></div>  
+                <div class="nav-link home"><a href="index.html">Home</a></div>
+                <div class="nav-link about"><a href="about.html">About Us</a></div>
+                <div class="nav-link cars"><a href="cars.html">Cars</a></div>
+                <div class="nav-link reservations"><a href="reservations.html">Reservations</a></div>
+                <div class="nav-link how"><a href="howTo.html">How To</a></div>
             </div>
             <!-- width<1578px vjen qikjo -->
-            <nav  class="dropmenu" > <a href="javascript:void(0);" onclick="showMenu()"><div id="menu"></div></a>
+            <nav class="dropmenu"> <a href="javascript:void(0);" onclick="showMenu()">
+                    <div id="menu"></div>
+                </a>
                 <ul id="mobileMenu" class="dropbtn">
                     <li><a href="javascript:void(0);" onclick="closeMenu()" id="closeButton">X</a></li>
                     <li><a href="index.html">Home</a></li>
@@ -41,7 +46,7 @@
             </nav>
         </div>
         <!-- navbar has no connection with the div below but the css code is reused, hence the "navbar" class -->
-        <div class="navbar homePage">
+        <div class="homePage">
             <div class="register">
                 <!-- ADD A ACTION  -->
                 <form method="get" action="reservations.html" autocomplete="off">
@@ -84,43 +89,79 @@
                 <h1>Why Choose Njazia Rent A Car ?</h1>
             </div>
             <div class="details">
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. <strong>Eum at distinctio iste eveniet fugit quia, deserunt nihil itaque doloremque sint,</strong> cumque sunt totam nisi ducimus reprehenderit dolores nostrum ipsa veniam!</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. <strong>Eum at distinctio iste eveniet
+                        fugit quia, deserunt nihil itaque doloremque sint,</strong> cumque sunt totam nisi ducimus
+                    reprehenderit dolores nostrum ipsa veniam!</p>
                 <br>
-                <p><strong>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</strong> Eum at distinctio iste eveniet fugit quia, deserunt nihil itaque doloremque sint, cumque sunt totam nisi ducimus reprehenderit dolores nostrum ipsa veniam!</p>
+                <p><strong>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</strong> Eum at distinctio iste
+                    eveniet fugit quia, deserunt nihil itaque doloremque sint, cumque sunt totam nisi ducimus
+                    reprehenderit dolores nostrum ipsa veniam!</p>
                 <br>
-                <p>Lorem ipsum dolor sit, amet consectetur <strong>adipisicing elit. Eum at distinctio iste eveniet fugit quia,</strong> deserunt nihil itaque doloremque sint, cumque sunt totam nisi ducimus reprehenderit dolores nostrum ipsa veniam!</p>
+                <p>Lorem ipsum dolor sit, amet consectetur <strong>adipisicing elit. Eum at distinctio iste eveniet
+                        fugit quia,</strong> deserunt nihil itaque doloremque sint, cumque sunt totam nisi ducimus
+                    reprehenderit dolores nostrum ipsa veniam!</p>
                 <br>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. <strong>Eum at distinctio iste eveniet fugit quia, deserunt nihil itaque doloremque sint, cumque sunt totam nisi ducimus reprehenderit dolores nostrum ipsa veniam!</strong></p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. <strong>Eum at distinctio iste eveniet
+                        fugit quia, deserunt nihil itaque doloremque sint, cumque sunt totam nisi ducimus reprehenderit
+                        dolores nostrum ipsa veniam!</strong></p>
             </div>
         </div>
         <div class="reasons">
-            <div class="reasonTexts reason1">
+            <div class="reason1">
                 <div class="reason1Image"></div>
                 <div class="reason1Text">
                     <h1>Safety First</h1>
-                    <p>At Njazia Rent A Car Safety is our number one priority.At Njazia Rent A Car Safety is our number one priority.At Njazia Rent A Car Safety is our number one priority.</p>
+                    <p>At Njazia Rent A Car Safety is our number one priority.At Njazia Rent A Car Safety is our number
+                        one priority.At Njazia Rent A Car Safety is our number one priority.</p>
                 </div>
             </div>
-            <div class="reasonTexts reason2">
+            <div class="reason2">
                 <div class="reason2Image"></div>
-                <div class = "reason2Text">
+                <div class="reason2Text">
                     <h1>Time Saving</h1>
-                    <p>Using Njazia Rent A Car you save yourself precious time. Using Njazia Rent A Car you save yourself precious time.Using Njazia Rent A Car you save yourself precious time.</p>
+                    <p>Using Njazia Rent A Car you save yourself precious time. Using Njazia Rent A Car you save
+                        yourself precious time.Using Njazia Rent A Car you save yourself precious time.</p>
                 </div>
             </div>
-            <div class="reasonTexts reason3">
+            <div class="reason3">
                 <div class="reason3Image"></div>
                 <div class="reason3Text">
                     <h1>Money Saving</h1>
-                    <p>Using our services you also save yourself hard earned money.Using our services you also save yourself hard earned money.Using our services you also save yourself hard earned money.</p>
+                    <p>Using our services you also save yourself hard earned money.Using our services you also save
+                        yourself hard earned money.Using our services you also save yourself hard earned money.</p>
                 </div>
             </div>
         </div>
+        <div class="footer">
+            <div class="copyright">
+                <h6 class="copyrightName name"><a href="index.html">Njazia Rent A Car</a></h6>
+                <h6 class="copyrightName">&copy;2021 Njazia Rent A Car.</h6>
+                <h6 class="copyrightName">All Rights Reserved.</h6>
+                <h6 class="copyrightName">
+                    <a href="">Terms</a> & <a href="">Privacy</a>
+                </h6>
+            </div>
+            <div class="images">
+                <a href="http://www.facebook.com" target="_blank">
+                    <div class="face"></div>
+                </a>
+                <a href="http://www.linkedin.com" target="_blank">
+                    <div class="linkedin"></div>
+                </a>
+                <a href="http://www.twitter.com" target="_blank">
+                    <div class="twitter"></div>
+                </a>
+            </div>
+        </div>
+        <button onclick="scroll()" class="toTopButtonDesign" type="button" id="scrollToTopButton">
+            <div class="toTopButtonImage"></div>
+        </button>
     </div>
 
     <!-- debugs -->
     <!-- <div style="position: absolute; width: 100%; top: 50px;"></div> -->
-    <p style="position: absolute; top: 4000px;">Debug</p>
+    <!-- <p style="position: absolute; top: 4000px;">Debug</p> -->
     <!-- debugs -->
 </body>
+
 </html>
