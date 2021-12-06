@@ -1,4 +1,3 @@
-import '../css'
 
 function showMenu() {
     document.getElementById("mobileMenu").style.width = "17%";
@@ -12,14 +11,9 @@ var scrollToTopButton = document.getElementById("scrollToTopButton");
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        scrollToTopButton.style.display = "block";
+    if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+        scrollToTopButton.style.opacity = "1";
     } else {
-        scrollToTopButton.style.display = "none";
+        scrollToTopButton.style.opacity = "0";
     }
-}
-
-function scroll() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
 }
