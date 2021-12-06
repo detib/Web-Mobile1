@@ -37,9 +37,9 @@ body {
     content: url(../images/logo.png);
 }
 .name {
-    font-size: 36px;
+    font-size: 28px;
     margin: 0 25px;
-    padding: 8% 0;
+    padding: 9% 0;
 }
 
 .name a {
@@ -51,29 +51,37 @@ body {
 
 .nav-links {
     display: flex;
+    transition: display 0.6s ease;
 }
 
 .nav-link {
     margin: 0 25px;
     padding: 20px 0;
+    transition: all 0.6s ease;
 }
 
 .nav-link a {
     text-decoration: none;
-    font-size: 36px;
+    font-size: 20px;
     font-weight: bold;
     color: white;
     text-shadow: 5px 5px 10px  gray;
+    transition: all 0.6s ease;
 }
 
 .dropmenu {
     display: none;
+    transition: all 0.6s ease;
+}
+
+.dropbtn {
+    transition: all 0.6s ease;
 }
 
 .homePage {
     height: 700px;
     z-index: auto;
-    background:linear-gradient(to bottom, white 20%, rgb(170, 170, 170));
+    background:linear-gradient(to bottom, rgb(170, 170, 170), white);
 }
 
 .tesla {
@@ -89,6 +97,7 @@ body {
     text-align: center;
     background: linear-gradient(to top, rgb(229, 255, 0), rgb(168, 154, 22));
     box-shadow: 5px 5px 25px black;
+    transition: all 0.6s;
 }
 
 .inputs {
@@ -144,7 +153,60 @@ body {
         transform: translateY(2px);
     }
 
-@media screen and (max-width: 1578px) {
+.whyUs {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(to bottom , white , rgb(210,210,210));
+    align-items: left;
+    width: 50%;
+    padding: 190px 25%;
+}
+
+.question {
+    margin-bottom: 40px;
+    font-size: 21px;
+}
+
+.details p{
+    margin: 0;
+    font-size: 18px;
+}
+
+.reasons {
+    background: linear-gradient(to bottom, rgb(210, 210, 210), white);
+    height: auto;
+    display: flex;
+    justify-content: space-evenly;
+    width: 80%;
+    padding: 10% 10% 0 10%;
+    flex-direction: row;
+}
+
+.reason1, .reason2, .reason3 {
+    display: inherit;
+    flex-direction: column;
+    width: 400px;
+    margin-left: 5%;
+    transition: all 0.6s ease;
+}
+
+.reason1Image {
+    content: url(../images/safety.png);
+    width: 200px;
+}
+
+.reason2Image {
+    content: url(../images/time.png);
+    width: 200px;
+}
+
+.reason3Image {
+    content: url(../images/money.png);
+    width: 200px;
+}
+
+@media screen and (max-width: 1400px) {
     .nav-links {
         display: none;
     }
@@ -169,12 +231,13 @@ body {
         z-index: 1;
         height: auto;
         width: 0;
-        transition: 0.3s;
+        transition: width 0.3s;
         background-color: #542321;
         list-style-type: none;
         border-radius: 0 0 0 35px;
         text-align: left;
         padding: 0;
+        overflow-x: hidden;
     }
     
     .dropbtn li {
@@ -196,5 +259,36 @@ body {
 
     .info {
         display: block;
+    }
+
+    .submit input {
+        width: 90%;
+        font-size: 10px;
+    }
+
+    .reasons {
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: auto;
+        display: flex;
+    }
+    .reason1, .reason2, .reason3 {
+        display: inherit;
+        margin: auto;
+        flex-direction: row;
+        width: 65%;
+        margin-top: 3%;
+    }
+
+    .reason1Text,.reason2Text,.reason3Text {
+        margin-left: 5%;
+    }
+
+    .reason1Text h1,.reason2Text h1,.reason3Text h1 {
+        margin-top: 0;
+    }
+
+    .reason1Image,.reason2Image,.reason3Image {
+        height: 100px;
     }
 }

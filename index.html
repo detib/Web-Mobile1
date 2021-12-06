@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <title>Final Project</title>
     <link rel="stylesheet" href="CSS/style.css">
+    <script src="js/index.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-    <script src="js/index.js"></script>
 </head>
 <body>
     <div class="main">
@@ -32,7 +32,7 @@
             <nav  class="dropmenu" > <a href="javascript:void(0);" onclick="showMenu()"><div id="menu"></div></a>
                 <ul id="mobileMenu" class="dropbtn">
                     <li><a href="javascript:void(0);" onclick="closeMenu()" id="closeButton">X</a></li>
-                    <li id="borderHome"><a href="index.html">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About Us</a></li>
                     <li><a href="cars.html">Cars</a></li>
                     <li><a href="reservations.html">Reservations</a></li>
@@ -44,7 +44,7 @@
         <div class="navbar homePage">
             <div class="register">
                 <!-- ADD A ACTION  -->
-                <form method="get" action="reservations.html">
+                <form method="get" action="reservations.html" autocomplete="off">
                     <h3>Register</h3>
                     <div class="inputs info">
                         <label>Name
@@ -79,11 +79,48 @@
                 <!-- Empty div for adding the image through CSS -->
             </div>
         </div>
+        <div class="whyUs">
+            <div class="question">
+                <h1>Why Choose Njazia Rent A Car ?</h1>
+            </div>
+            <div class="details">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. <strong>Eum at distinctio iste eveniet fugit quia, deserunt nihil itaque doloremque sint,</strong> cumque sunt totam nisi ducimus reprehenderit dolores nostrum ipsa veniam!</p>
+                <br>
+                <p><strong>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</strong> Eum at distinctio iste eveniet fugit quia, deserunt nihil itaque doloremque sint, cumque sunt totam nisi ducimus reprehenderit dolores nostrum ipsa veniam!</p>
+                <br>
+                <p>Lorem ipsum dolor sit, amet consectetur <strong>adipisicing elit. Eum at distinctio iste eveniet fugit quia,</strong> deserunt nihil itaque doloremque sint, cumque sunt totam nisi ducimus reprehenderit dolores nostrum ipsa veniam!</p>
+                <br>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. <strong>Eum at distinctio iste eveniet fugit quia, deserunt nihil itaque doloremque sint, cumque sunt totam nisi ducimus reprehenderit dolores nostrum ipsa veniam!</strong></p>
+            </div>
+        </div>
+        <div class="reasons">
+            <div class="reasonTexts reason1">
+                <div class="reason1Image"></div>
+                <div class="reason1Text">
+                    <h1>Safety First</h1>
+                    <p>At Njazia Rent A Car Safety is our number one priority.At Njazia Rent A Car Safety is our number one priority.At Njazia Rent A Car Safety is our number one priority.</p>
+                </div>
+            </div>
+            <div class="reasonTexts reason2">
+                <div class="reason2Image"></div>
+                <div class = "reason2Text">
+                    <h1>Time Saving</h1>
+                    <p>Using Njazia Rent A Car you save yourself precious time. Using Njazia Rent A Car you save yourself precious time.Using Njazia Rent A Car you save yourself precious time.</p>
+                </div>
+            </div>
+            <div class="reasonTexts reason3">
+                <div class="reason3Image"></div>
+                <div class="reason3Text">
+                    <h1>Money Saving</h1>
+                    <p>Using our services you also save yourself hard earned money.Using our services you also save yourself hard earned money.Using our services you also save yourself hard earned money.</p>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- debugs -->
     <!-- <div style="position: absolute; width: 100%; top: 50px;"></div> -->
-    <p style="position: absolute; top: 2000px;">Debug</p>
+    <p style="position: absolute; top: 4000px;">Debug</p>
     <!-- debugs -->
 </body>
 </html>
