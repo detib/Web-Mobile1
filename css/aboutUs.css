@@ -1,0 +1,53 @@
+.banner {
+	position: relative;
+	content: url(../images/banner.jpg);
+	width: 100%;
+}
+.headers {
+	text-align: center;
+	margin-top:50px;
+}
+.row {
+	padding: 0 5%;
+	display: flex;
+	justify-content: space-evenly;
+	flex-direction: row;
+	width: 90%;
+}
+.person {
+	padding: 25px 0;
+	display: inherit;
+	flex-direction: column;
+	width: 400px;
+	transition: all 0.6s ease;
+	justify-content: center;
+	align-items: center;
+}
+.person h2 {
+	text-align: center;
+}
+.person div{
+	width: 250px;
+	border-radius: 15px;
+}
+#veton {
+	content: url(../images/veton.jpg);
+}
+#deti{
+	content: url(../images/veton.jpg);
+}
+#lumi{
+	content: url(../images/veton.jpg);
+}
+#eris{
+	content: url(../images/veton.jpg);
+}
+#mete{
+	content: url(../images/veton.jpg);
+}
+#map{
+	width: 90%;
+	height: 600px;
+	margin: auto;
+	border: 2px double rgba(0,0,0,1);
+}
