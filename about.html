@@ -1,199 +1,255 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <title>Final Project</title>
-        <link rel="stylesheet" href="css/style.css">
-        <!-- About Us specific CSS -->
-        <link rel="stylesheet" href="css/aboutUs.css">
-        <!-- Cards CSS -->
-        <link rel="stylesheet" href="css/cards.css">
-        <!-- Footer CSS and JS files -->
-        <link rel="stylesheet" href="css/footer.css">
-        <script defer src="./js/index.js"></script>
+<head>
+  <meta charset="UTF-8" />
+  <title>Final Project</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- About Us specific CSS -->
+  <link rel="stylesheet" href="css/aboutUs.css" />
+  <!-- Cards CSS -->
+  <link rel="stylesheet" href="css/cards.css" />
+  <!-- Footer CSS and JS files -->
+  <link rel="stylesheet" href="css/footer.css" />
+  <script defer src="./js/index.js"></script>
 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+</head>
 
-
-    </head>
-
-    <body>
-        <div class="main">
-            <div class="navbar">
-                <div class="nav-logo">
-                    <div class="logo">
-                        <a href="index.html" class="image"></a>
-                    </div>
-                    <div>
-                        <h6 class="name"><a href="index.html">Njazia Rent A Car</a></h6>
-                    </div>
-                </div>
-                <div class="nav-links">
-                    <!-- nese nuk vyjn in the future delete extra classes -->
-                    <div class="nav-link home"><a href="index.html">Home</a></div>
-                    <div class="nav-link about"><a href="about.html">About Us</a></div>
-                    <div class="nav-link cars"><a href="cars.html">Cars</a></div>
-                    <div class="nav-link reservations"><a href="reservations.html">Reservations</a></div>
-                    <div class="nav-link how"><a href="howTo.html">How To</a></div>
-                </div>
-                <!-- width<1476px vjen qikjo -->
-                <nav class="dropmenu"> <a href="javascript:void(0);" onclick="showMenu()">
-                        <div id="menu"></div>
-                    </a>
-                    <ul id="mobileMenu" class="dropbtn">
-                        <li><a href="javascript:void(0);" onclick="closeMenu()" id="closeButton">X</a></li>
-                        <li id="borderHome"><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="cars.html">Cars</a></li>
-                        <li><a href="reservations.html">Reservations</a></li>
-                        <li><a href="howTo.html">How To</a></li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="banner">
-                <!-- Div for banner -->
-            </div>
-            <div class="headers">
-                <h1>Our team</h1>
-            </div>
-            <!-- Row 1 of our team -->
-            <div class="row">
-                <div class="person">
-                    <div id="veton"></div>
-                    <h2>Veton Klinaku</h2>
-                </div>
-                <div class="person">
-                    <div id="deti"></div>
-                    <h2>Deti Baholli</h2>
-                </div>
-                <div class="person">
-                    <div id="lumi"></div>
-                    <h2>Lumi Zhubi</h2>
-                </div>
-            </div>
-            <!-- Row 2 of Our Team -->
-            <div class="row">
-                <div class="person">
-                    <div id="eris"></div>
-                    <h2>Eris Llapashtica</h2>
-                </div>
-                <div class="person">
-                    <div id="mete"></div>
-                    <h2>Mete Salihi</h2>
-                </div>
-            </div>
-            <!-- Costumer Reviews  Start-->
-            <div class="headers">
-                <h1>Still not convinced?</h1>
-                <h2>Here are some of the reviews that people sent to us!</h2>
-                <div class="row">
-                    <div class="card">
-                        <div id="rev1" class="cardImg">
-                            <!-- Image of first review -->
-                        </div>
-                        <div class="cardBody">
-                            <h5>Happy Costumer 1</h5>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                Eaque, animi delectus adipisci deleniti
-                            </p>
-                        </div>
-                        <div class="cardFooter">
-                            <p>Reviewed 1 week ago</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div id="rev2" class="cardImg">
-                            <!-- Image of second review -->
-                        </div>
-                        <div class="cardBody">
-                            <h5>Happy Costumer 2</h5>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                Eaque, animi delectus adipisci deleniti
-                            </p>
-                        </div>
-                        <div class="cardFooter">
-                            <p>Reviewed 3 week ago</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div id="rev3" class="cardImg">
-                            <!-- Image of first review -->
-                        </div>
-                        <div class="cardBody">
-                            <h5>Happy Costumer 3</h5>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                Eaque, animi delectus adipisci deleniti
-                            </p>
-                        </div>
-                        <div class="cardFooter">
-                            <p>Reviewed 5 week ago</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div id="rev4" class="cardImg">
-                            <!-- Image of first review -->
-                        </div>
-                        <div class="cardBody">
-                            <h5>Happy Costumer 4</h5>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                Eaque, animi delectus adipisci deleniti
-                            </p>
-                        </div>
-                        <div class="cardFooter">
-                            <p>Reviewed 6 week ago</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Costumer Reviews  End-->
-
-            <!-- Location Start -->
-            <div class="headers">
-                <h1>Our Location</h1>
-                <iframe id="map"
-                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11734.304791446119!2d21.1922622!3d42.6703355!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xbbf87d6b640faf83!2sThe%20American%20University%20in%20Kosovo!5e0!3m2!1sen!2s!4v1638887637369!5m2!1sen!2s"
-                    allowfullscreen="" loading="lazy"></iframe>
-            </div>
-            <!-- Location End  -->
-
-            <!-- Footer Start -->
-            <div class="footer">
-                <div class="copyright">
-                    <h6 class="copyrightName name"><a href="index.html">Njazia Rent A Car</a></h6>
-                    <h6 class="copyrightName">&copy;2021 Njazia Rent A Car.</h6>
-                    <h6 class="copyrightName">All Rights Reserved.</h6>
-                    <h6 class="copyrightName">
-                        <a href="">Terms</a> & <a href="">Privacy</a>
-                    </h6>
-                </div>
-                <div class="images">
-                    <a href="http://www.facebook.com" target="_blank">
-                        <div class="face"></div>
-                    </a>
-                    <a href="http://www.linkedin.com" target="_blank">
-                        <div class="linkedin"></div>
-                    </a>
-                    <a href="http://www.twitter.com" target="_blank">
-                        <div class="twitter"></div>
-                    </a>
-                </div>
-            </div>
-            <div class="buttonScroll">
-                <a href="#top">
-                    <button type="button" id="scrollToTopButton">
-                        <div class="toTopButtonImage"></div>
-                    </button>
-                </a>
-            </div>
+<body>
+  <div class="main">
+    <div class="navbar">
+      <div class="nav-logo">
+        <div class="logo">
+          <a href="index.html" class="image"></a>
         </div>
-        <!-- Footer End -->
-    </body>
+        <div>
+          <h6 class="name"><a href="index.html">Njazia Rent A Car</a></h6>
+        </div>
+      </div>
+      <div class="nav-links">
+        <!-- nese nuk vyjn in the future delete extra classes -->
+        <div class="nav-link home"><a href="index.html">Home</a></div>
+        <div class="nav-link about"><a href="about.html">About Us</a></div>
+        <div class="nav-link cars"><a href="cars.html">Cars</a></div>
+        <div class="nav-link reservations">
+          <a href="reservations.html">Reservations</a>
+        </div>
+        <div class="nav-link how"><a href="howTo.html">How To</a></div>
+      </div>
+      <!-- width<1476px vjen qikjo -->
+      <nav class="dropmenu">
+        <a href="javascript:void(0);" onclick="showMenu()">
+          <div id="menu"></div>
+        </a>
+        <ul id="mobileMenu" class="dropbtn">
+          <li>
+            <a href="javascript:void(0);" onclick="closeMenu()" id="closeButton">X</a>
+          </li>
+          <li id="borderHome"><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="cars.html">Cars</a></li>
+          <li><a href="reservations.html">Reservations</a></li>
+          <li><a href="howTo.html">How To</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="banner">
+      <!-- Div for banner -->
+    </div>
+    
+    <!-- First seaction of the about us page -->
+    <div class="headers">
+      <h1>Our team</h1> <!-- Header for "Our Team" -->
+    </div>
+
+    <!-- Row 1 of our team -->
+    <div class="row"> <!-- div that will contain 3 images in a row, has flex properties to show the elements inside as a grid -->
+      <div class="person"> <!-- the main class of the card for "Our team" photos -->
+        <div class="personInner"> <!-- give the basic atributes to the card that will be fliped -->
+          <div class="personPhoto"> <!-- the front of the card -->
+            <div id="veton"></div> <!-- this div contains the image -->
+          </div>
+          <div class="personInfo"> <!-- this div contains our information such as name and year of studies -->
+            <h2>Veton Klinaku</h2> <!-- name -->
+            <h3>Sophomore CIT Studnet</h3> <!-- year of studies-->
+            <h3>I am the Team Leader</h3> <!-- position of the member-->
+          </div>
+        </div>
+      </div>
+      <!--The comments above are valid for the next 4 elements too -->
+      <div class="person">
+        <div class="personInner">
+          <div class="personPhoto">
+            <div id="deti"></div>
+          </div>
+          <div class="personInfo">
+            <h2>Deti Baholli</h2>
+            <h3>Sophomore CIT Studnet</h3>
+            <h3>I am the Frontend Developer</h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="person">
+        <div class="personInner">
+          <div class="personPhoto">
+            <div id="lumi"></div>
+          </div>
+          <div class="personInfo">
+            <h2>Lumi Zhubi</h2>
+            <h3>Sophomore CIT Studnet</h3>
+            <h3>I am the Backend Developer</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Row 2 of Our Team -->
+
+    <div class="row">
+      <div class="person">
+        <div class="personInner">
+          <div class="personPhoto">
+            <div id="eris"></div>
+          </div>
+          <div class="personInfo">
+            <h2>Eris Llapashtica</h2>
+            <h3>Junior CIT Studnet</h3>
+            <h3>I am the Graphic Designer</h3>
+          </div>
+        </div>
+      </div>
+      <div class="person">
+        <div class="personInner">
+          <div class="personPhoto">
+            <div id="mete"></div>
+          </div>
+          <div class="personInfo">
+            <h2>Mete Salihi</h2>
+            <h3>Sophomore CIT Studnet</h3>
+            <h3>I am the Content Creator</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Costumer Reviews  Start-->
+    <div class="headers"> <!-- Header for costumer reviews-->
+      <h1>Still not convinced?</h1>
+      <h2>Here are some of the reviews that people sent to us!</h2>
+    </div>
+    <div class="row"> <!-- div that will contain 4 card in a row, has flex properties to show the elements in grid format -->
+      <div class="card"> <!-- the main class of the reviews card, has all the attributes for width, flex, border radius and much more -->
+        <div id="rev1" class="cardImg"> <!-- div to hold the image of the card-->
+          <!-- Image of first review -->
+        </div>
+        <div class="cardBody"> <!-- div to hold the review from the consumer-->
+          <h5>Happy Costumer 1</h5> <!-- name of the consumer-->
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque,
+            animi delectus adipisci deleniti
+          </p> <!-- the actuall review of the consumer-->
+        </div>
+        <div class="cardFooter">
+          <p>Reviewed 1 week ago</p> <!-- a footer for the card, tells how long has been since the review-->
+        </div>
+      </div>
+      <!--The comments above are valid for the next 3 elements too -->
+
+      <div class="card">
+        <div id="rev2" class="cardImg">
+          <!-- Image of second review -->
+        </div>
+        <div class="cardBody">
+          <h5>Happy Costumer 2</h5>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque,
+            animi delectus adipisci deleniti
+          </p>
+        </div>
+        <div class="cardFooter">
+          <p>Reviewed 3 week ago</p>
+        </div>
+      </div>
+      <div class="card">
+        <div id="rev3" class="cardImg">
+          <!-- Image of first review -->
+        </div>
+        <div class="cardBody">
+          <h5>Happy Costumer 3</h5>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque,
+            animi delectus adipisci deleniti
+          </p>
+        </div>
+        <div class="cardFooter">
+          <p>Reviewed 5 week ago</p>
+        </div>
+      </div>
+      <div class="card">
+        <div id="rev4" class="cardImg">
+          <!-- Image of first review -->
+        </div>
+        <div class="cardBody">
+          <h5>Happy Costumer 4</h5>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque,
+            animi delectus adipisci deleniti
+          </p>
+        </div>
+        <div class="cardFooter">
+          <p>Reviewed 6 week ago</p>
+        </div>
+      </div>
+    </div>
+  <!-- Costumer Reviews  End-->
+
+  <!-- Location Start -->
+  <div class="headers"> <!-- Header section for Location-->
+    <h1>Our Location</h1>
+    <iframe id="map" loading="lazy" frameborder="0"
+      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11734.304791446119!2d21.1922622!3d42.6703355!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xbbf87d6b640faf83!2sThe%20American%20University%20in%20Kosovo!5e0!3m2!1sen!2s!4v1638887637369!5m2!1sen!2s">
+    </iframe> <!-- this is a google map iframe autogenerated from the website, currently it is pining RIT Kosovo just as an example-->
+  </div>
+  <!-- Location End  -->
+
+  <!-- Footer Start -->
+  <div class="footer">
+    <div class="copyright">
+      <h6 class="copyrightName name">
+        <a href="index.html">Njazia Rent A Car</a>
+      </h6>
+      <h6 class="copyrightName">&copy;2021 Njazia Rent A Car.</h6>
+      <h6 class="copyrightName">All Rights Reserved.</h6>
+      <h6 class="copyrightName">
+        <a href="">Terms</a> & <a href="">Privacy</a>
+      </h6>
+    </div>
+    <div class="images">
+      <a href="http://www.facebook.com" target="_blank">
+        <div class="face"></div>
+      </a>
+      <a href="http://www.linkedin.com" target="_blank">
+        <div class="linkedin"></div>
+      </a>
+      <a href="http://www.twitter.com" target="_blank">
+        <div class="twitter"></div>
+      </a>
+    </div>
+  </div>
+  <div class="buttonScroll">
+    <a href="#top">
+      <button type="button" id="scrollToTopButton">
+        <div class="toTopButtonImage"></div>
+      </button>
+    </a>
+  </div>
+  </div>
+  <!-- Footer End -->
+  </div>
+</body>
 
 </html>

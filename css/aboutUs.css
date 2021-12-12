@@ -1,53 +1,66 @@
 .banner {
-	position: relative;
-	content: url(../images/banner.jpg);
-	width: 100%;
+	position: relative; /*position relative*/
+	content: url(../images/banner.jpg); /*image for the banner*/
+	width: 100%; /*100% width of the parent element (body)*/
 }
 .headers {
-	text-align: center;
-	margin-top:50px;
+	text-align: center; /*Align the text center*/
+	margin-top: 50px; /*50px margin on top of elements*/
 }
 .row {
-	padding: 0 5%;
-	display: flex;
-	justify-content: space-evenly;
-	flex-direction: row;
-	width: 90%;
+	width: 90%; /*90% width of the parent element (body)*/
+	padding: 0 5% 5% 5%; /*5% paddint in left,right and bottom of the row*/
+	display: flex; /*Display the elements as flex elements so we can create a grid*/
+	flex-direction: row; /*declare the axes of the grid in this case rows(horizontal)*/
+	justify-content: space-evenly; /*distribution of spaces between elements of the grid in tihs case space evenly which makes every space between the elements itself and also the grid even*/
 }
 .person {
-	padding: 25px 0;
-	display: inherit;
-	flex-direction: column;
-	width: 400px;
-	transition: all 0.6s ease;
-	justify-content: center;
-	align-items: center;
+	padding: 25px 0; /* padding in top and bottom of the elements by 25px*/
+	display: inherit; /*inherite the diplay value in this case Flex*/
+	flex-direction: column; /*declare the axes of the grid.In the element level we have column because the elements inside should be in coloms*/
+	transition: all 1s ease; /*transition of all the effects the element has in 1 second using the ease tranisiton timing functions*/
+	justify-content: center; /*makes the elements inside appear in the center(horizontaly)*/
+	align-items: center; /*makes the elements inside appear in the center(vertically)*/
+	width: 400px; /*width of the card*/
+	height: 400px; /*height of the card */
+	perspective: 1000px; /*The distance between the z=0 plane and the user in order to give a 3D-positioned element some perspective */
 }
-.person h2 {
-	text-align: center;
+.personInner {
+	position: relative; /*relative position to the other objects*/
+	width: 100%; /*100% width of the parent element*/
+	height: 100%; /*100% height of the parent element*/
+	text-align: center; /* Align the text center*/
+	transition: transform 1s; /*a 1s tranisitio in the form of 3d transformation*/
+	transform-style: preserve-3d; /*the style of the transofrmation is 3d*/
 }
-.person div{
-	width: 250px;
-	border-radius: 15px;
+.person:hover .personInner {
+	transform: rotateY(180deg); /*Rotate the image by 180degre in the vertical axes*/
 }
-#veton {
-	content: url(../images/veton.jpg);
+.personPhoto, .personInfo {
+	position: absolute; /*absolute position to the other objects*/
+	width: 100%; /*100% width of the parent element*/
+	height: 100%; /*100% height of the parent element*/
+	backface-visibility: hidden; /*Hide and show the back face of two rotated <div> elements*/
 }
-#deti{
-	content: url(../images/veton.jpg);
+.personInfo {
+	background-color: #6e6e6e; /*The background color of the fliped card*/
+	color: #fff; /*Text color white*/
+	transform: rotateY(180deg); /*Rotate the text by 180degre in the vertical axes*/
 }
-#lumi{
-	content: url(../images/veton.jpg);
+.person div {
+	width: 400px; /*Width of out images */
+	height: 400px; /*Height of out images */
+	border-radius: 15px; /*curve the edge of the images and the card by 15px*/
 }
-#eris{
-	content: url(../images/veton.jpg);
-}
-#mete{
-	content: url(../images/veton.jpg);
-}
-#map{
-	width: 90%;
-	height: 600px;
-	margin: auto;
-	border: 2px double rgba(0,0,0,1);
+#veton { content: url(../images/veton.jpg); } /*image for Our team section*/ 
+#deti { content: url(../images/veton.jpg); } /*image for Our team section*/
+#lumi { content: url(../images/veton.jpg); } /*image for Our team section*/
+#eris { content: url(../images/veton.jpg); } /*image for Our team section*/
+#mete { content: url(../images/veton.jpg); } /*image for Our team section*/
+
+#map {
+	width: 90%; /*90% width of the parent element (body)*/
+	height: 600px;/*height of 600px*/
+	margin: auto; /*make the map appear in the center*/
+	border-radius: 15px; /*curved the edges of the map by 15px*/
 }

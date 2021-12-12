@@ -1,61 +1,49 @@
 .card {
-    display: inherit;
-	width: 20%;
-    position: relative;
-    flex-direction: column;
-    justify-content: center;
-	align-items: center;
-    min-width: 0;
-    word-wrap: break-word;
-    background-color: #fff;
-    background-clip: border-box;
-    border: 1px solid rgba(0,0,0,.25);
-    border-radius: 10px;
-    box-shadow:2px 2px 15px rgba(68, 68, 68,0.9);
-    transition:0.5s;
+    display: inherit; /* inherete the display atribute from parent*/
+	width: 20%; /* each card should be 20% of the parent in this case class row*/
+    min-width: 0; /* allow the element to shrink down to 0px (this is needed because we are using flex)*/
+    position: relative; /* the element should be positioned relatively to its siblings*/
+    flex-direction: column; /* Inside the card the element should be positioned in a column*/
+    justify-content: center; /* makes the elements inside appear in the center(horizontaly)*/
+	align-items: center; /* makes the elements inside appear in the center(vertically) */
+    border-radius: 10px; /* make the card corners round by 10px*/
+    box-shadow:0 0 15px #454545; /* box shadow on all sides with 15px blur*/
+    transition:0.5s linear; /* transition of 0.5s using the linear timing function*/
 }
 .card:hover{
-    box-shadow:0 0 25px rgba(0, 0, 0,1);
+    box-shadow:0 0 35px #000; /* on card hover the size of the shadow increases to 35px*/
 }
 .cardImg{
-    width: 500px;
-    max-width:100%; 
-    height: auto;
-    vertical-align:middle;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    
+    width: 500px; /* width of the image*/
+    max-width:100%; /* the maximum width that the image can have is 100% of the paret (because of flex shrink)*/
+    height: auto; /* the height is calculated automaticlly by the browser*/
+    vertical-align:middle; /* positions block elements vertically in the middle of the parent div*/
+    border-top-left-radius: 10px; /* border radius in the top left is 10px*/
+    border-top-right-radius: 10px; /* border radius in the top right is 10px*/
 }
 .cardBody{
-    flex: 1 1 auto;
-    padding: 0px 15px 5px 15px;
+    flex: 1 1 auto; /* flex growth is 1 ,flex shrink is 1 and flex basis is auto*/
+    padding: 0px 15px 5px 15px; /* pading in right(15px),bottom(5px) and left(15px)*/
 }
 .cardBody h5{
-    font-size:1.25rem;
-    font-weight:400;
-    margin-bottom: 15px;
+    font-size:1.25rem; /* increase font size to 1.25rem*/
+    font-weight:600; /* make the font more bold */
+    margin-bottom: 15px; /* increase the spacing from the bottom */
 }
 .cardFooter{
-    width:100%;
-    text-align:center;
-    background-color: #cfcfcf;
-    display:block;
-    border-bottom-right-radius: 9px;
-    border-bottom-left-radius: 9px;
+    width:100%; /* 100% width relative to the parent class*/
+    text-align:center; /* align text in the center*/
+    background-color: #cfcfcf; /* change the background color to some shade of gray*/
+    display:block; /* display the element as a bloc*/
+    border-bottom-right-radius: 10px; /* border radius in the bottom left is 10px*/
+    border-bottom-left-radius: 10px; /* border radius in the bottom left is 10px*/
 }
 .cardFooter p{
-    font-size:1rem;
-    color: #6c757d;
+    font-size:.75rem; /* decreased the font size to 0.75 rem*/
+    color: #6c757d; /* changed the color of the text to some shade of gray*/
 }
-#rev1{
-	content: url(../images/reviews/rev1.jpg);
-}
-#rev2{
-	content: url(../images/reviews/rev2.jpg);
-}
-#rev3{
-	content: url(../images/reviews/rev3.jpg);
-}
-#rev4{
-	content: url(../images/reviews/rev4.jpg);
-}
+
+#rev1{content: url(../images/reviews/rev1.jpg);} /* image for reviews section*/ 
+#rev2{content: url(../images/reviews/rev2.jpg);} /* image for reviews section*/
+#rev3{content: url(../images/reviews/rev3.jpg);} /* image for reviews section*/
+#rev4{content: url(../images/reviews/rev4.jpg);} /* image for reviews section*/
