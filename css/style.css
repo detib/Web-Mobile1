@@ -2,9 +2,23 @@
     border: 1px solid black;
 } */
 
+/* ============================================
+Main body style and .main div style
+body changes the font-family to poppins, which is also imported
+.main positions the page to each corner 
+so we do not have white space above and to the left of the page
+============================================ */
+html {
+    font-size: 16px;
+}
 
 body {
     font-family: 'Poppins';
+}
+
+::selection {
+    background-color: transparent;
+    color: yellow;
 }
 
 .main {
@@ -14,21 +28,30 @@ body {
     width: 100%;
 }
 
+/* ============================================
+    the styles below are for the navbar and apply to all five pages
+============================================ */
 .navbar {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 2000;
-    height: 100px;
-    width: 90%;
-    background-color: rgb(0, 0, 0);
-    padding: 0 5%;
+    position: fixed;  /* Sticky position so the navbar is always on top of the page even if we scroll */
+    top: 0;  /* top 0 for the navbar to be on top */
+    display: flex;  /* Creating a flexbox to display items as flex elements then position them easily */
+    justify-content: space-between;  /* Since we have 2 main elements in the navbar we give this property to push both elements away from each other to the opposite ends */
+    align-items: center;  /* Since we have a deafult flex-direction:row this property with align items in the center vertically */
+    z-index: 2000;  /* z-index is 2000 so it is always on top, 2000 value is to overestimate so we do not need to go back and change if we add more elements */
+    height: 100px;  /* 100px height */
+    width: 90%;  /* this is not 100% so we add padding later and then we have 5% space on both ends */
+    background-color: rgba(0, 0, 0, 0);  /* background-color black */
+    padding: 0 5%;  /* The padding to push elements away from the corners */
+    transition: background-color 0.5s;
+}
+
+.nav-opacity {
+    background-color: rgba(0, 0, 0, 0.6);
 }
 
 .nav-logo {
-    display: inherit;
-    height: inherit;
+    display: inherit;  /* To inherit the flexbox so that we position the logo and the brand name */
+    height: inherit;  /* height is also inherited */
 }
 
 .logo {
@@ -38,7 +61,7 @@ body {
     content: url(../images/logo.png);
 }
 .name {
-    font-size: 28px;
+    font-size: 1.75rem;
     margin: 0 25px;
     padding: 9% 0;
 }
@@ -63,7 +86,7 @@ body {
 
 .nav-link a {
     text-decoration: none;
-    font-size: 20px;
+    font-size: 1.25em;
     font-weight: bold;
     color: white;
     text-shadow: 5px 5px 10px  gray;
@@ -79,141 +102,92 @@ body {
     transition: all 0.6s ease;
 }
 
-.homePage {
-    height: 700px;
-    z-index: auto;
-    background: linear-gradient(to bottom, rgb(170, 170, 170), white);
+/* ============================================
+    Homepage
+============================================ */
+
+.homepage {
     position: relative;
+    top: 0;
+}
+
+.homepageImage {
+    width: 100%;
+}
+
+.homepageImage img{
+    width: 100%;
+    filter: brightness(0.4);
+    /* animation: fade 1s; */
+}
+
+.text {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 30%;
     display: flex;
-    justify-content: space-between;
-    width: 90%;
-    padding: 0 5%;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    color: white;
 }
 
-.tesla {
-    max-height: 700px;
-    width: 60%;
-    content: url(../images/tesla.png);
-    padding-right: 5%;
-}
-
-.register {
-    width: 30%;
-    border-radius: 15px;
-    text-align: center;
-    background: linear-gradient(to top, rgb(229, 255, 0), rgb(168, 154, 22));
-    box-shadow: 5px 5px 25px black;
-    transition: all 0.6s;
-}
-
-.inputs {
-    margin: 0 10px 10px;
-}
-
-.inputs label {
-    width: 95%;
-    margin: 0 3px;
-}
-
-.inputs input{
-    width: 100%;
-    border: 2px double rgb(115, 153, 38);
-    border-radius: 5px;
-    background-color: rgba(0, 17, 255, 0.35);
-    box-shadow: 2px 2px 15px white;
-}
-
-.info {
-    display: flex;
-}
-
-.info input {
-    width: 95%;
-}
-
-/* Submit Button DIV */
-.submit {
-    width: 100%;
-    margin: 40px 0 20px;
-}
-
-/* Submit Button design */
-.submit input {
-    width: 50%;
-    height: 30px;
-    background-image: linear-gradient(to right, rgb(255, 122, 122), rgb(255, 255, 0), #00ffff, #ffff00);
-    border: 2px solid red;
-    border-radius: 15px;
-    box-shadow: 0 4px 3px rgb(192, 194, 56);
-    background-size: 300% ;
-    transition: ease-in-out;
-    transition: box-shadow 0.1s, border-color 0.1s, transform 0.1s, background-position 0.7s;
-    
-}
-    .submit input:hover {
-        background-position: 100% 0;
-        border-color: rgb(175, 0, 0);
-    }
-    .submit input:active {
-        box-shadow: 0 2px 3px rgb(143, 145, 42);
-        transform: translateY(2px);
-    }
-
-.whyUs {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    background: linear-gradient(to bottom , white , rgb(210,210,210));
-    align-items: left;
-    width: 50%;
-    padding: 190px 25%;
-}
-
-.question {
-    margin-bottom: 40px;
-    font-size: 21px;
-}
-
-.details p{
+.text h6 {
     margin: 0;
-    font-size: 18px;
 }
 
-.reasons {
-    background: linear-gradient(to bottom, rgb(210, 210, 210), white);
-    height: auto;
-    display: flex;
-    justify-content: space-evenly;
-    width: 80%;
-    padding: 10% 10% 0 10%;
-    flex-direction: row;
+.text a {
+    text-decoration: none;
+    color: white;
+    background-color: #fab700;
+    text-transform: uppercase;
+    font-weight: 800;
+    padding: 25px 60px;
+    font-size: 2rem;
+    transition: 0.3s;
+    margin-top: 50px;
 }
 
-.reason1, .reason2, .reason3 {
-    display: inherit;
-    flex-direction: column;
-    width: 400px;
-    margin-left: 5%;
-    transition: all 0.6s ease;
+.text a:hover {
+    border: 1px solid #fab700;
+    background-color: transparent;
+    transform: scale(1.05);
+    font-size: 2.1rem;
+    color: #fab700;
 }
 
-.reason1Image {
-    content: url(../images/safety.png);
-    width: 200px;
+#firstTxt {
+    font-size: 2rem;
 }
 
-.reason2Image {
-    content: url(../images/time.png);
-    width: 200px;
+#scndTxt{
+    font-size: 4rem;
 }
 
-.reason3Image {
-    content: url(../images/money.png);
-    width: 200px;
+#slideImg {
+}
+
+@keyframes fade {
+    0%{
+        opacity: 0.4;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 @media screen and (max-width: 1400px) {
+    html {
+        font-size: 12px;
+    }
+
+    .main {
+        overflow-x: hidden; /* This is used to hide the mobile menu to the side.
+         It is on the side by the "right" property, but it overflows,
+         so, this hides that overflow making the menu seem to come from the right side out of nowhere */
+    }
+
     .nav-links {
         display: none;
     }
@@ -222,29 +196,30 @@ body {
         display: block;
         font-weight: bold;
         margin-right: 50px;
+        overflow-x: hidden;
     }
     #menu {
         content: url(../images/menu.png);
         width: 60px;
         border-radius: 5px;
     }
-
+    
     .dropbtn {
-        /* display: none; */
+        overflow-x: hidden !important;
         position: absolute;
         margin: 0;
         right: 0;
         top: 0;
         z-index: 1;
         height: auto;
-        width: 0;
-        transition: width 0.3s;
+        width: 200px;
+        transform: translateX(200px);
+        transition: transform 0.3s;
         background-color: #542321;
         list-style-type: none;
         border-radius: 0 0 0 35px;
         text-align: left;
         padding: 0;
-        overflow-x: hidden;
     }
     
     .dropbtn li {

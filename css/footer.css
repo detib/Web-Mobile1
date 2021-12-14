@@ -1,7 +1,6 @@
 html {
     scroll-behavior:smooth;
 }
-
 .face {
     content: url(../images/face.png);
     width: 50px;
@@ -24,9 +23,8 @@ html {
     justify-content: space-between;
     height: 60px;
     width: 90%;
-    margin-top: 5%;
     padding: 2% 5%;
-    background-color: #3d3d3d;
+    background: linear-gradient(to bottom, black, rgb(61, 61, 61));
     align-items: center;
 }
 .copyright {
@@ -56,14 +54,13 @@ html {
     justify-content: space-between;
 }
 
-
-#scrollToTopButton {
-    /* display: none; */
+#butoni {
     opacity: 0;
-    background-color: rgb(61, 61, 61, 0.5);
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+}
+
+#showButton {
+    opacity: 0;
+    /* display: none; */
     position: fixed;
     bottom: 140px;
     right: 20px;
@@ -72,16 +69,39 @@ html {
     width: 30px;
     height: 30px;
     z-index: 4000;
-    transition: opacity 0.5s ease-in-out ;
 }
 
 .toTopButtonImage {
+    overflow-x: hidden;
     content: url(../images/arrowup.png);
     margin: 0;
     padding: 0;
     width: 30px;
     height: 30px;
+    cursor: pointer;
 }
+
+.buttonScroll-visible {
+    opacity: 1;
+    animation: fadeInRight 1s ease 1 forwards;
+}
+.buttonScroll-hidden {
+    opacity: 0;
+    animation: fadeOutRight 1s ease 1 forwards;
+}
+
+
+
+@keyframes fadeInRight {
+    0%{opacity: 0; transform: translateX(100%);}
+    100%{opacity: 1; transform: translateX(0);}
+}
+@keyframes fadeOutRight {
+    0%{opacity: 1; transform: translateX(0);}
+    100%{opacity: 0; transform: translateX(100%);}
+}
+
+
 
 @media screen and (max-width: 1400px){
     .images {

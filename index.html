@@ -14,127 +14,81 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 </head>
 
-<body>
-    <div class="main">
-        <div class="navbar" id="top">
-            <div class="nav-logo">
-                <div class="logo">
-                    <a href="index.html" class="image"></a>
-                </div>
-                <div>
-                    <h6 class="name"><a href="index.html">Njazia Rent A Car</a></h6>
-                </div>
-            </div>
-            <div class="nav-links">
-                <!-- nese nuk vyjn in the future delete extra classes -->
-                <div class="nav-link home"><a href="index.html">Home</a></div>
-                <div class="nav-link about"><a href="about.html">About Us</a></div>
-                <div class="nav-link cars"><a href="cars.html">Cars</a></div>
-                <div class="nav-link reservations"><a href="reservations.html">Reservations</a></div>
-                <div class="nav-link how"><a href="howTo.html">How To</a></div>
-            </div>
-            <!-- width<1578px vjen qikjo -->
-            <nav class="dropmenu"> <a href="javascript:void(0);" onclick="showMenu()">
-                    <div id="menu"></div>
-                </a>
-                <ul id="mobileMenu" class="dropbtn">
-                    <li><a href="javascript:void(0);" onclick="closeMenu()" id="closeButton">X</a></li>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="cars.html">Cars</a></li>
-                    <li><a href="reservations.html">Reservations</a></li>
-                    <li><a href="howTo.html">How To</a></li>
-                </ul>
-            </nav>
-        </div>
-        <!-- navbar has no connection with the div below but the css code is reused, hence the "navbar" class -->
-        <div class="homePage">
-            <div class="register">
-                <!-- ADD A ACTION  -->
-                <form method="get" action="reservations.html" autocomplete="off">
-                    <h3>Register</h3>
-                    <div class="inputs info">
-                        <label>Name
-                            <input type="text">
-                        </label>
-                        <label>Surname
-                            <input type="text">
-                        </label>
+<body onload="slider(), counter()">
+    <div class="main" id="top"> <!-- id = "top" e shton qaty-->
+            <div class="navbar" id="navbar"> <!-- id = "navbar" ntnjejtin ven-->
+                <div class="nav-logo">
+                    <div class="logo">
+                        <a href="index.html" class="image"></a>
                     </div>
-                    <div class="inputs info">
-                        <label> Pick-up Location
-                            <input id="location" type="text">
-                        </label>
-                        <label> Drop-off Location
-                            <input type="text">
-                        </label>
+                    <div>
+                        <h6 class="name"><a href="index.html">Njazia&nbsp;Rent&nbsp;A&nbsp;Car</a></h6> <!-- &nbsp; between words so they do not break if the screen is smaller-->
                     </div>
-                    <div class="inputs info">
-                        <label>Pick-up Date
-                            <input type="date">
-                        </label>
-                        <label>Drop-off Date
-                            <input type="date">
-                        </label>
-                    </div>
-                    <div class="submit">
-                        <input type="submit" value="Search For Available Car">
-                    </div>
-                </form>
-            </div>
-            <div class="tesla">
-                <!-- Empty div for adding the image through CSS -->
-            </div>
-        </div>
-        <div class="whyUs">
-            <div class="question">
-                <h1>Why Choose Njazia Rent A Car ?</h1>
-            </div>
-            <div class="details">
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. <strong>Eum at distinctio iste eveniet
-                        fugit quia, deserunt nihil itaque doloremque sint,</strong> cumque sunt totam nisi ducimus
-                    reprehenderit dolores nostrum ipsa veniam!</p>
-                <br>
-                <p><strong>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</strong> Eum at distinctio iste
-                    eveniet fugit quia, deserunt nihil itaque doloremque sint, cumque sunt totam nisi ducimus
-                    reprehenderit dolores nostrum ipsa veniam!</p>
-                <br>
-                <p>Lorem ipsum dolor sit, amet consectetur <strong>adipisicing elit. Eum at distinctio iste eveniet
-                        fugit quia,</strong> deserunt nihil itaque doloremque sint, cumque sunt totam nisi ducimus
-                    reprehenderit dolores nostrum ipsa veniam!</p>
-                <br>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. <strong>Eum at distinctio iste eveniet
-                        fugit quia, deserunt nihil itaque doloremque sint, cumque sunt totam nisi ducimus reprehenderit
-                        dolores nostrum ipsa veniam!</strong></p>
-            </div>
-        </div>
-        <div class="reasons">
-            <div class="reason1">
-                <div class="reason1Image"></div>
-                <div class="reason1Text">
-                    <h1>Safety First</h1>
-                    <p>At Njazia Rent A Car Safety is our number one priority.At Njazia Rent A Car Safety is our number
-                        one priority.At Njazia Rent A Car Safety is our number one priority.</p>
+                </div>
+                <div class="nav-links">
+                    <!-- nese nuk vyjn in the future delete extra classes -->
+                    <div class="nav-link home"><a href="index.html">Home</a></div>
+                    <div class="nav-link about"><a href="about.html">About Us</a></div>
+                    <div class="nav-link cars"><a href="cars.html">Cars</a></div>
+                    <div class="nav-link reservations"><a href="reservations.html">Reservations</a></div>
+                    <div class="nav-link how"><a href="howTo.html">How To</a></div>
+                </div>
+                <!-- width<1578px vjen qikjo -->
+                    <nav class="dropmenu">
+                        <a href="javascript:void(0);" onclick="showMenu()">
+                            <div id="menu"></div>
+                        </a>
+                        <ul id="mobileMenu" class="dropbtn">
+                            <li><a href="javascript:void(0);" onclick="closeMenu()" id="closeButton">X</a></li>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="cars.html">Cars</a></li>
+                            <li><a href="reservations.html">Reservations</a></li>
+                            <li><a href="howTo.html">How To</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            <div class="homepage">
+                <div class="homepageImage">
+                    <img src="./images/homepage/4.jpg" alt="" id="slideImg">
+                        <div class="text">
+                            <h6 id="firstTxt">The definition of a royal ride</h6>
+                            <h6 id="scndTxt">Rent your car Today!</h6>
+                            <a href="reservations.html" id="linkTxt">
+                                <h6>Rent Car Now</h6>
+                            </a>
+                        </div>
                 </div>
             </div>
-            <div class="reason2">
-                <div class="reason2Image"></div>
-                <div class="reason2Text">
-                    <h1>Time Saving</h1>
-                    <p>Using Njazia Rent A Car you save yourself precious time. Using Njazia Rent A Car you save
-                        yourself precious time.Using Njazia Rent A Car you save yourself precious time.</p>
-                </div>
-            </div>
-            <div class="reason3">
-                <div class="reason3Image"></div>
-                <div class="reason3Text">
-                    <h1>Money Saving</h1>
-                    <p>Using our services you also save yourself hard earned money.Using our services you also save
-                        yourself hard earned money.Using our services you also save yourself hard earned money.</p>
-                </div>
-            </div>
-        </div>
-        <!-- Qito deri te komenti tjeter shtoj nfund te about -->
+        <h1 id="counter">500</h1>
+        <h1>abc</h1>
+        <h1>abc</h1>
+        <h1>abc</h1>
+        <h1>abc</h1>
+        <h1>abc</h1>
+        <h1>abc</h1>
+        <h1>abc</h1>
+        <h1>abc</h1>
+        <h1>abc</h1>
+        <h1>abc</h1>
+        <h1>abc</h1>
+        <h1>abc</h1>
+        <h1>abc</h1>
+        <h1>abc</h1>
+        <h1>abc</h1>
+        <h1>abc</h1>
+        <h1>abc</h1>
+        <h1>abc</h1>
+        <h1>abc</h1>
+        <h1>abc</h1>
+        <h1>abc</h1>
+        <h1>abc</h1>
+        <h1>abc</h1>
+        <h1>abc</h1>
+        <h1>abc</h1>
+        <h1>abc</h1>
+        <h1>abc</h1>
+        <h1>abc</h1>
         <div class="footer">
             <div class="copyright">
                 <h6 class="copyrightName name"><a href="index.html">Njazia Rent A Car</a></h6>
@@ -156,14 +110,15 @@
                 </a>
             </div>
         </div>
-        <div class="buttonScroll">
-            <a href="#top">
-                <button type="button" id="scrollToTopButton">
+        <!-- prej qitu merre bone replace qat butonin e njejt qe ja nis prej div class buttonScroll -->
+        <div id="butoni">
+            <div id="showButton">
+                <a href="#top">
                     <div class="toTopButtonImage"></div>
-                </button>
-            </a>
+                </a>
+            </div>
         </div>
-        <!-- Deri qitu shtoj gjethqysh se osht footeri edhe qaj butoni -->
+        <!-- deri qitu -->
     </div>
 
     <!-- debugs -->
