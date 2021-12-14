@@ -1,17 +1,17 @@
 .card {
     display: inherit; /* inherete the display atribute from parent*/
-	width: 20%; /* each card should be 20% of the parent in this case class row*/
-    min-width: 0; /* allow the element to shrink down to 0px (this is needed because we are using flex)*/
+	width: 30%; /* each card should be 20% of the parent in this case class row*/
     position: relative; /* the element should be positioned relatively to its siblings*/
     flex-direction: column; /* Inside the card the element should be positioned in a column*/
-    justify-content: center; /* makes the elements inside appear in the center(horizontaly)*/
-	align-items: center; /* makes the elements inside appear in the center(vertically) */
+    justify-content: space-evenly; /*distribution of spaces between elements of the grid in evenly which makes every space between the elements itself and also the grid even*/	align-items: center; /* makes the elements inside appear in the center(vertically) */
     border-radius: 10px; /* make the card corners round by 10px*/
     box-shadow:0 0 15px #454545; /* box shadow on all sides with 15px blur*/
     transition:0.5s linear; /* transition of 0.5s using the linear timing function*/
+    margin-bottom: 10%;
 }
 .card:hover{
     box-shadow:0 0 35px #000; /* on card hover the size of the shadow increases to 35px*/
+    transform: translateY(-10px);
 }
 .cardImg{
     width: 500px; /* width of the image*/
@@ -39,7 +39,7 @@
     border-bottom-left-radius: 10px; /* border radius in the bottom left is 10px*/
 }
 .cardFooter p{
-    font-size:.75rem; /* decreased the font size to 0.75 rem*/
+    font-size:.9rem; /* decreased the font size to 0.9 rem*/
     color: #6c757d; /* changed the color of the text to some shade of gray*/
 }
 
@@ -47,3 +47,5 @@
 #rev2{content: url(../images/reviews/rev2.jpg);} /* image for reviews section*/
 #rev3{content: url(../images/reviews/rev3.jpg);} /* image for reviews section*/
 #rev4{content: url(../images/reviews/rev4.jpg);} /* image for reviews section*/
+#rev5{content: url(../images/reviews/rev5.jpg);} /* image for reviews section*/
+#rev6{content: url(../images/reviews/rev6.jpg);} /* image for reviews section*/

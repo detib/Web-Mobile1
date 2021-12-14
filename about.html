@@ -19,8 +19,8 @@
 </head>
 
 <body>
-  <div class="main">
-    <div class="navbar">
+  <div class="main" id="top">
+    <div class="navbar" id="navbar">
       <div class="nav-logo">
         <div class="logo">
           <a href="index.html" class="image"></a>
@@ -70,7 +70,7 @@
       <div class="person"> <!-- the main class of the card for "Our team" photos -->
         <div class="personInner"> <!-- give the basic atributes to the card that will be fliped -->
           <div class="personPhoto"> <!-- the front of the card -->
-            <div id="veton"></div> <!-- this div contains the image -->
+            <div class="contentPhoto" id="veton"></div> <!-- this div contains the image -->
           </div>
           <div class="personInfo"> <!-- this div contains our information such as name and year of studies -->
             <h2>Veton Klinaku</h2> <!-- name -->
@@ -83,7 +83,7 @@
       <div class="person">
         <div class="personInner">
           <div class="personPhoto">
-            <div id="deti"></div>
+            <div class="contentPhoto" id="deti"></div>
           </div>
           <div class="personInfo">
             <h2>Deti Baholli</h2>
@@ -96,7 +96,7 @@
       <div class="person">
         <div class="personInner">
           <div class="personPhoto">
-            <div id="lumi"></div>
+            <div class="contentPhoto" id="lumi"></div>
           </div>
           <div class="personInfo">
             <h2>Lumi Zhubi</h2>
@@ -105,15 +105,12 @@
           </div>
         </div>
       </div>
-    </div>
 
     <!-- Row 2 of Our Team -->
-
-    <div class="row">
       <div class="person">
         <div class="personInner">
           <div class="personPhoto">
-            <div id="eris"></div>
+            <div class="contentPhoto" id="eris"></div>
           </div>
           <div class="personInfo">
             <h2>Eris Llapashtica</h2>
@@ -125,7 +122,7 @@
       <div class="person">
         <div class="personInner">
           <div class="personPhoto">
-            <div id="mete"></div>
+            <div class="contentPhoto" id="mete"></div>
           </div>
           <div class="personInfo">
             <h2>Mete Salihi</h2>
@@ -176,7 +173,7 @@
       </div>
       <div class="card">
         <div id="rev3" class="cardImg">
-          <!-- Image of first review -->
+          <!-- Image of third review -->
         </div>
         <div class="cardBody">
           <h5>Happy Costumer 3</h5>
@@ -191,7 +188,7 @@
       </div>
       <div class="card">
         <div id="rev4" class="cardImg">
-          <!-- Image of first review -->
+          <!-- Image of fourth review -->
         </div>
         <div class="cardBody">
           <h5>Happy Costumer 4</h5>
@@ -202,6 +199,36 @@
         </div>
         <div class="cardFooter">
           <p>Reviewed 6 week ago</p>
+        </div>
+      </div>
+      <div class="card">
+        <div id="rev5" class="cardImg">
+          <!-- Image of fourth review -->
+        </div>
+        <div class="cardBody">
+          <h5>Happy Costumer 5</h5>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque,
+            animi delectus adipisci deleniti
+          </p>
+        </div>
+        <div class="cardFooter">
+          <p>Reviewed 2 months ago</p>
+        </div>
+      </div>
+      <div class="card">
+        <div id="rev6" class="cardImg">
+          <!-- Image of fourth review -->
+        </div>
+        <div class="cardBody">
+          <h5>Happy Costumer 6</h5>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque,
+            animi delectus adipisci deleniti
+          </p>
+        </div>
+        <div class="cardFooter">
+          <p>Reviewed 3 months ago</p>
         </div>
       </div>
     </div>
@@ -240,13 +267,12 @@
       </a>
     </div>
   </div>
-  <div class="buttonScroll">
-    <a href="#top">
-      <button type="button" id="scrollToTopButton">
+  <div id="butoni">
+    <div id="showButton">
+      <a href="#top">
         <div class="toTopButtonImage"></div>
-      </button>
-    </a>
-  </div>
+      </a>
+    </div>
   </div>
   <!-- Footer End -->
   </div>

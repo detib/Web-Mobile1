@@ -5,33 +5,39 @@
 }
 .headers {
 	text-align: center; /*Align the text center*/
-	margin-top: 50px; /*50px margin on top of elements*/
+	margin-top: 3%; /*50px margin on top of elements*/
 }
 .row {
 	width: 90%; /*90% width of the parent element (body)*/
 	padding: 0 5% 5% 5%; /*5% paddint in left,right and bottom of the row*/
 	display: flex; /*Display the elements as flex elements so we can create a grid*/
 	flex-direction: row; /*declare the axes of the grid in this case rows(horizontal)*/
-	justify-content: space-evenly; /*distribution of spaces between elements of the grid in tihs case space evenly which makes every space between the elements itself and also the grid even*/
+	justify-content: space-evenly; /*distribution of spaces between elements of the grid in evenly which makes every space between the elements itself and also the grid even*/
+	flex-wrap:wrap; /*makes it possible to have multiple lines of div elements, the elements wich are last appear in the next row dependig on the screen size*/
 }
 .person {
-	padding: 25px 0; /* padding in top and bottom of the elements by 25px*/
+	padding: 2% 0; /* padding in top and bottom of the elements by 25px*/
 	display: inherit; /*inherite the diplay value in this case Flex*/
 	flex-direction: column; /*declare the axes of the grid.In the element level we have column because the elements inside should be in coloms*/
 	transition: all 1s ease; /*transition of all the effects the element has in 1 second using the ease tranisiton timing functions*/
 	justify-content: center; /*makes the elements inside appear in the center(horizontaly)*/
 	align-items: center; /*makes the elements inside appear in the center(vertically)*/
-	width: 400px; /*width of the card*/
+	width: 30%; /*width of the card*/
+	min-width: 400px; /*minimum width the card should have when the screen is smaller (phones/tablets)*/
 	height: 400px; /*height of the card */
+	min-height:400px; /*minimum width the card should have when the screen is smaller (phones/tablets)*/
 	perspective: 1000px; /*The distance between the z=0 plane and the user in order to give a 3D-positioned element some perspective */
+	margin-bottom: 5%; /*The elment apears 5% from each other verticaly)*/
 }
 .personInner {
+	box-shadow:5px 5px 25px #000; /* box shadow with 25px blur*/
 	position: relative; /*relative position to the other objects*/
 	width: 100%; /*100% width of the parent element*/
 	height: 100%; /*100% height of the parent element*/
 	text-align: center; /* Align the text center*/
 	transition: transform 1s; /*a 1s tranisitio in the form of 3d transformation*/
 	transform-style: preserve-3d; /*the style of the transofrmation is 3d*/
+	border-radius: 15px; /*curve the edge of the images and the card by 15px */
 }
 .person:hover .personInner {
 	transform: rotateY(180deg); /*Rotate the image by 180degre in the vertical axes*/
@@ -41,18 +47,19 @@
 	width: 100%; /*100% width of the parent element*/
 	height: 100%; /*100% height of the parent element*/
 	backface-visibility: hidden; /*Hide and show the back face of two rotated <div> elements*/
+	border-radius: 15px; /*curve the edge of the images and the card by 15px */
 }
 .personInfo {
 	background-color: #6e6e6e; /*The background color of the fliped card*/
 	color: #fff; /*Text color white*/
 	transform: rotateY(180deg); /*Rotate the text by 180degre in the vertical axes*/
 }
-.person div {
-	width: 400px; /*Width of out images */
-	height: 400px; /*Height of out images */
-	border-radius: 15px; /*curve the edge of the images and the card by 15px*/
+.contentPhoto{
+	width: 100%; /*100% width of the parent element*/
+	height: auto; /* the height is calculated automaticlly by the browser*/
+	border-radius: 15px; /*curve the edge of the images and the card by 15px */
 }
-#veton { content: url(../images/veton.jpg); } /*image for Our team section*/ 
+#veton{ content: url(../images/veton.jpg); } /*image for Our team section*/ 
 #deti { content: url(../images/veton.jpg); } /*image for Our team section*/
 #lumi { content: url(../images/veton.jpg); } /*image for Our team section*/
 #eris { content: url(../images/veton.jpg); } /*image for Our team section*/
@@ -60,7 +67,16 @@
 
 #map {
 	width: 90%; /*90% width of the parent element (body)*/
-	height: 600px;/*height of 600px*/
-	margin: auto; /*make the map appear in the center*/
-	border-radius: 15px; /*curved the edges of the map by 15px*/
+	height: 600px; /*height of 600px*/
+	margin: 5% auto; /*make the map appear in the center(horizontaly) and 5% down from top and bottom*/
+	border-radius:15px; /* curved the edges of the map by 15px*/
 }
+ @media screen and (max-width: 720px) { /* change style when screen size is less than 720 */
+.row{
+	flex-direction: column; /*change the direct of the grid from row to coloumn to show all the elements in aline*/
+	justify-content: space-evenly; /*distribution of spaces between elements of the grid in evenly which makes every space between the elements itself and also the grid even*/
+	align-items: center; /*makes the elements inside appear in the center*/
+	height: auto; /* the height is calculated automaticlly by the browser*/
+	display: flex; /*Display the elements as flex elements so we can create a grid*/
+	}
+} 
