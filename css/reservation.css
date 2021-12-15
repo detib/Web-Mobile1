@@ -8,6 +8,10 @@
 	flex-wrap: wrap; /*makes it possible to have multiple lines of div elements, the elements wich are last appear in the next row dependig on the screen size*/
 	margin-top: 20vh;
 }
+/* give row elements a width of 45%  */
+.rowElement {
+	width: 45%;
+}
 
 
 /* Slideshow css */
@@ -50,6 +54,9 @@
     border-radius: 1rem;
 }
 /* The dots attributes */
+#dots{
+	text-align:center
+}
 .dot {
 	cursor: pointer;
 	height: 15px;
@@ -72,6 +79,10 @@
 		font-size: 11px;
 	}
 }
+
+#carSpecs{
+	margin: 0
+}
 .specifications{
 	margin-top:2%;
 }
@@ -85,6 +96,11 @@
 
 
 /* Form css */
+#formDiv{
+	width: 80%;
+	margin: 5% auto;
+	text-align: center;
+}
 /* Give margin to the labels and make them 50% of the parent*/
 label {
 	margin-top: 2rem;
@@ -93,7 +109,7 @@ label {
 /* Attributes for the inputs (width,height) */
 input {
 	border-radius: 5px;
-	width: 90%;
+	width: 95%;
 	height: 1.5rem;
 	outline: none;
 	border: 2px solid #a9a9a9;
@@ -103,10 +119,7 @@ input:focus {
 	outline: none;
 	border: 2px solid #fab700;
 }
-/* give row elements a width of 45%  */
-.rowElement {
-	width: 45%;
-}
+
 /*  Specifications for the form apperance */
 #form {
 	width: 100%;

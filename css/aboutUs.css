@@ -54,6 +54,7 @@
 	background-color: #fab700; /*The background color of the fliped card*/
 	color: #fff; /*Text color white*/
 	transform: rotateY(180deg); /*Rotate the text by 180degre in the vertical axes*/
+	min-height: 350px;
 }
 .contentPhoto{
 	width: 100%; /*100% width of the parent element*/

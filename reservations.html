@@ -75,98 +75,100 @@
                     </div>
                     <br>
 
-                    <div style="text-align:center">
+                    <div id="dots">
                         <span class="dot" onclick="currentSlide(1)"></span>
                         <span class="dot" onclick="currentSlide(2)"></span>
                         <span class="dot" onclick="currentSlide(3)"></span>
                         <span class="dot" onclick="currentSlide(4)"></span>
                         <span class="dot" onclick="currentSlide(5)"></span>
                     </div>
-                    <div>
-                        <h2>Car specification</h2>
-                        <div class="specifications">
-                            <h3 >Brand: </h3 >
-                            <p>BMW</p>
-                        </div>
-                        <div class="specifications">
-                            <h3 >Model: </h3 >
-                            <p>320D</p>
-                        </div>
-                        <div class="specifications">
-                            <h3 >Year of production: </h3    >
-                            <p>2017</p>
-                        </div>
-                        <div class="specifications">
-                            <h3>Gear box: </h3  >
-                            <p>Manual</p>
-                        </div>
-                        <div class="specifications">
-                            <h3 >Fuel: </h3  >
-                            <p>Disel </p>
-                        </div>
-                        <div class="specifications">
-                            <h3>Fuel Consumption: </h3  >
-                            <p>5.1 l/100km </p>
-                        </div>
-                        <div class="specifications">
-                            <h3>Number of Seats: </h3  >
-                            <p>5</p>
-                        </div>
-                        <div class="specifications">
-                            <h3>Horse power: </h3  >
-                            <p>163Hp</p>
-                        </div>
-                        <div class="specifications">
-                            <h3>Cubic Capacity: </h3  >
-                            <p>1.995 ccm</p>
-                        </div>
-                    </div>
                 </div>
                 <div class="rowElement">
-                    <form name="myForm" onsubmit="return validateForm()" method="post" id="form">
-                        <label for="fname">Name: <input type="text" name="fname" placeholder="Name"></label>
-                        <label for="sname">Surname: <input type="text" name="sname" placeholder="Surname"></label>
-                        <label for="uLocation">Pick-up Location: <input type="text" name="uLocation"
-                                placeholder="Pick-up Location"></label>
-                        <label for="dLocation">Drop-off Location: <input type="text" name="dLocation"
-                                placeholder="Drop-off Location"></label>
-                        <label for="uDate">Pick-up Date: <input type="date" name="uDate"></label>
-                        <label for="dDate">Drop-off Date: <input type="date" name="dDate"></label>
-                        <input type="submit" value="Submit" id="submitBtn">
-                    </form>
+                    <h2 id="carSpecs">Car specification</h2>
+                    <div class="specifications">
+                        <h3>Brand: </h3>
+                        <p>BMW</p>
+                    </div>
+                    <div class="specifications">
+                        <h3>Model: </h3>
+                        <p>320D</p>
+                    </div>
+                    <div class="specifications">
+                        <h3>Year of production: </h3>
+                        <p>2017</p>
+                    </div>
+                    <div class="specifications">
+                        <h3>Gear box: </h3>
+                        <p>Manual</p>
+                    </div>
+                    <div class="specifications">
+                        <h3>Fuel: </h3>
+                        <p>Disel </p>
+                    </div>
+                    <div class="specifications">
+                        <h3>Fuel Consumption: </h3>
+                        <p>5.1 l/100km </p>
+                    </div>
+                    <div class="specifications">
+                        <h3>Number of Seats: </h3>
+                        <p>5</p>
+                    </div>
+                    <div class="specifications">
+                        <h3>Horse power: </h3>
+                        <p>163Hp</p>
+                    </div>
+                    <div class="specifications">
+                        <h3>Cubic Capacity: </h3>
+                        <p>1.995 ccm</p>
+                    </div>
                 </div>
             </div>
-            <div class="footer">
-                <div class="copyright">
-                    <h6 class="copyrightName name">
-                        <a href="index.html">'Washington' Rent A Car</a>
-                    </h6>
-                    <h6 class="copyrightName">&copy;2021 'Washington' Rent A Car.</h6>
-                    <h6 class="copyrightName">All Rights Reserved.</h6>
-                    <h6 class="copyrightName">
-                        <a href="">Terms</a> & <a href="">Privacy</a>
-                    </h6>
-                </div>
-                <div class="images">
-                    <a href="http://www.facebook.com" target="_blank">
-                        <div class="face"></div>
-                    </a>
-                    <a href="http://www.linkedin.com" target="_blank">
-                        <div class="linkedin"></div>
-                    </a>
-                    <a href="http://www.twitter.com" target="_blank">
-                        <div class="twitter"></div>
-                    </a>
-                </div>
+            <div id="formDiv">
+                <h2>Make your reservation now!</h2>
+                <form name="reservationForm" action="#" onsubmit="return validateForm()" method="post" id="form">
+                    <label for="fname">Name:<br> <input type="text" name="fname" placeholder="Name"></label>
+                    <label for="sname">Surname:<br> <input type="text" name="sname" placeholder="Surname"></label>
+                    <label for="uLocation">Pick-up Location: <input type="text" name="uLocation"
+                            placeholder="Pick-up Location"></label>
+                    <label for="dLocation">Drop-off Location: <input type="text" name="dLocation"
+                            placeholder="Drop-off Location"></label>
+                    <label for="uDate">Pick-up Date: <input type="date" name="uDate"></label>
+                    <label for="dDate">Drop-off Date: <input type="date" name="dDate"></label>
+                    <input type="submit" value="Submit" id="submitBtn">
+                </form>
             </div>
-            <div id="butoni">
-                <div id="showButton">
-                    <a href="#top">
-                        <div class="toTopButtonImage"></div>
-                    </a>
-                </div>
+        <div class="footer">
+            <div class="copyright">
+                <h6 class="copyrightName name">
+                    <a href="index.html">'Washington' Rent A Car</a>
+                </h6>
+                <h6 class="copyrightName">&copy;2021 'Washington' Rent A Car.</h6>
+                <h6 class="copyrightName">All Rights Reserved.</h6>
+                <h6 class="copyrightName">
+                    <a href="">Terms</a> & <a href="">Privacy</a>
+                </h6>
+            </div>
+            <div class="images">
+                <a href="http://www.facebook.com" target="_blank">
+                    <div class="face"></div>
+                </a>
+                <a href="http://www.linkedin.com" target="_blank">
+                    <div class="linkedin"></div>
+                </a>
+                <a href="http://www.twitter.com" target="_blank">
+                    <div class="twitter"></div>
+                </a>
             </div>
         </div>
+        <div id="butoni">
+            <div id="showButton">
+                <a href="#top">
+                    <div class="toTopButtonImage"></div>
+                </a>
+            </div>
+        </div>
+        </div>
+
 
         <script src="./js/reservation.js"></script>
     </body>
