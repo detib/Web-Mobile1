@@ -11,7 +11,7 @@ function closeMenu() {
 }
 
 //window.onscroll creates a function that calls the functions scrollFunction(), and navbarOpacity() every time the user scrolls
-window.onscroll = function () { scrollFunction()};
+window.onscroll = function () {scrollFunction()};
 // ==================================================================
 // ==================================================================
 // ==================================================================
