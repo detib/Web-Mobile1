@@ -1,0 +1,78 @@
+#header {
+	text-align: center; /*Align the text center*/
+	margin-top: 5%; /*5% margin on top of elements*/
+}
+a{
+    text-decoration: none;
+    color:#000;
+}
+.gallery {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 50px;
+    column-gap: 50px;
+    margin: 5%;
+    justify-content: space-evenly;
+}
+h3, p {
+    text-align: center;
+  }
+.buttonRes {
+    padding: 10px 20px;
+    border: 0;
+    font-size: 85%;
+    background-color:white;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 22%;
+    margin-bottom: 22%;
+    cursor: pointer;  
+    font-family:Verdana, Geneva, Tahoma, sans-serif ;
+    border-radius: 7%;
+}
+.buttonRes:hover {
+    font-size: 100%;
+    background-color: whitesmoke;
+    box-shadow: -8px 8px 12px dimgray;
+    transition: 390ms; 
+}
+.carrow {
+    width: 30%;
+    background-color: #9FACE6;
+    background-image: linear-gradient(180deg, #fab700 0%, #eefa4c 100%);
+    border-radius: 12px;
+    box-shadow: -8px 8px 12px dimgray;
+}
+.carrow .cars {
+    width: 100%;
+}
+#carpic1 {
+    content: url(../images/cars/toyota.png);
+}
+#carpic2 {
+    content: url(../images/cars/tesla2.png);
+}
+#carpic3 {
+    content: url(../images/cars/tesla3.png); 
+}
+#carpic4 {
+    content: url(../images/cars/bmwM5.png);
+}
+#carpic5 {
+    content: url(../images/cars/mercedescabrio.png);
+}
+#carpic6 {
+    content: url(../images/cars/mercedesclk.png);
+}
+#carpic7 {
+    content: url(../images/cars/cadillac.png);
+}
+#carpic8 {
+    content: url(../images/cars/Velar.png);
+}
+#carpic9 {
+    content: url(../images/cars/land_rover.png);
+}

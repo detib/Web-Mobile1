@@ -25,7 +25,6 @@
 	width: 30%; /*width of the card*/
 	min-width: 400px; /*minimum width the card should have when the screen is smaller (phones/tablets)*/
 	height: 400px; /*height of the card */
-	min-height:400px; /*minimum width the card should have when the screen is smaller (phones/tablets)*/
 	perspective: 1000px; /*The distance between the z=0 plane and the user in order to give a 3D-positioned element some perspective */
 	margin-bottom: 5%; /*The elment apears 5% from each other verticaly)*/
 }
@@ -34,6 +33,7 @@
 	position: relative; /*relative position to the other objects*/
 	width: 100%; /*100% width of the parent element*/
 	height: 100%; /*100% height of the parent element*/
+	min-height:400px; /*minimum width the card should have when the screen is smaller (phones/tablets)*/
 	text-align: center; /* Align the text center*/
 	transition: transform 1s; /*a 1s tranisitio in the form of 3d transformation*/
 	transform-style: preserve-3d; /*the style of the transofrmation is 3d*/
@@ -50,7 +50,7 @@
 	border-radius: 15px; /*curve the edge of the images and the card by 15px */
 }
 .personInfo {
-	background-color: #6e6e6e; /*The background color of the fliped card*/
+	background-color: #fab700; /*The background color of the fliped card*/
 	color: #fff; /*Text color white*/
 	transform: rotateY(180deg); /*Rotate the text by 180degre in the vertical axes*/
 }
@@ -59,11 +59,11 @@
 	height: auto; /* the height is calculated automaticlly by the browser*/
 	border-radius: 15px; /*curve the edge of the images and the card by 15px */
 }
-#veton{ content: url(../images/veton.jpg); } /*image for Our team section*/ 
-#deti { content: url(../images/veton.jpg); } /*image for Our team section*/
-#lumi { content: url(../images/veton.jpg); } /*image for Our team section*/
-#eris { content: url(../images/veton.jpg); } /*image for Our team section*/
-#mete { content: url(../images/veton.jpg); } /*image for Our team section*/
+#veton{ content: url(../images/about/veton.jpg); } /*image for Our team section*/ 
+#deti { content: url(../images/about/deti.jpg); } /*image for Our team section*/
+#lumi { content: url(../images/about/lumi.jpg); } /*image for Our team section*/
+#eris { content: url(../images/about/eris.jpg); } /*image for Our team section*/
+#mete { content: url(../images/about/mete.jpg); } /*image for Our team section*/
 
 #map {
 	width: 90%; /*90% width of the parent element (body)*/

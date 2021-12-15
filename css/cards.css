@@ -1,17 +1,18 @@
 .card {
     display: inherit; /* inherete the display atribute from parent*/
-	width: 30%; /* each card should be 20% of the parent in this case class row*/
+	width: 30%; /* each card should be 30% of the parent in this case class row*/
+	min-width:400px; /*minimum width the card should have when the screen is smaller (phones/tablets)*/
     position: relative; /* the element should be positioned relatively to its siblings*/
     flex-direction: column; /* Inside the card the element should be positioned in a column*/
     justify-content: space-evenly; /*distribution of spaces between elements of the grid in evenly which makes every space between the elements itself and also the grid even*/	align-items: center; /* makes the elements inside appear in the center(vertically) */
     border-radius: 10px; /* make the card corners round by 10px*/
     box-shadow:0 0 15px #454545; /* box shadow on all sides with 15px blur*/
     transition:0.5s linear; /* transition of 0.5s using the linear timing function*/
-    margin-bottom: 10%;
+    margin-bottom: 10%; /* increase the spacing from the bottom */
 }
 .card:hover{
     box-shadow:0 0 35px #000; /* on card hover the size of the shadow increases to 35px*/
-    transform: translateY(-10px);
+    transform: translateY(-10px); /* make the card go up and appear as it comes forward*/
 }
 .cardImg{
     width: 500px; /* width of the image*/

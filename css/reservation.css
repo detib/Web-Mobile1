@@ -1,0 +1,129 @@
+/* Attributes for the div that makes it responsive */
+.row {
+	width: 90%; /*90% width of the parent element (body)*/
+	padding: 0 5% 5% 5%; /*5% paddint in left,right and bottom of the row*/
+	display: flex; /*Display the elements as flex elements so we can create a grid*/
+	flex-direction: row; /*declare the axes of the grid in this case rows(horizontal)*/
+	justify-content: space-evenly; /*distribution of spaces between elements of the grid in evenly which makes every space between the elements itself and also the grid even*/
+	flex-wrap: wrap; /*makes it possible to have multiple lines of div elements, the elements wich are last appear in the next row dependig on the screen size*/
+	margin-top: 20vh;
+}
+
+
+/* Slideshow css */
+
+/* Slideshow container */
+.slideshow-container {
+	max-width: 1000px;
+	position: relative;
+	margin: auto;
+}
+/* Next & previous buttons */
+.prev,
+.next {
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	width: auto;
+	padding: 16px;
+	margin-top: -22px;
+	color: white;
+	font-weight: bold;
+	font-size: 18px;
+	transition: 0.6s ease;
+	border-radius: 0 3px 3px 0;
+	user-select: none;
+}
+/* Position the "next button" to the right */
+.next {
+	right: 0;
+	border-radius: 3px 0 0 3px;
+}
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+	background-color: #fab700;
+}
+/* Propertys for images */
+.carouselImg{
+    width:100%;
+    border-radius: 1rem;
+}
+/* The dots attributes */
+.dot {
+	cursor: pointer;
+	height: 15px;
+	width: 15px;
+	margin: 0 2px;
+	background-color: #ffe44d;
+	border-radius: 50%;
+	display: inline-block;
+	transition: background-color 0.6s ease;
+}
+/* Change the color of the active photo*/
+.active, .dot:hover {
+	background-color: #fa8e00;
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+	.prev,
+	.next {
+		font-size: 11px;
+	}
+}
+.specifications{
+	margin-top:2%;
+}
+
+.specifications h3,
+.specifications p {
+    display: inline;
+    vertical-align: top;
+    line-height: 2rem;
+}
+
+
+/* Form css */
+/* Give margin to the labels and make them 50% of the parent*/
+label {
+	margin-top: 2rem;
+	width: 50%;
+}
+/* Attributes for the inputs (width,height) */
+input {
+	border-radius: 5px;
+	width: 90%;
+	height: 1.5rem;
+	outline: none;
+	border: 2px solid #a9a9a9;
+}
+/* Change the color of input borders when it the user is typing*/
+input:focus {
+	outline: none;
+	border: 2px solid #fab700;
+}
+/* give row elements a width of 45%  */
+.rowElement {
+	width: 45%;
+}
+/*  Specifications for the form apperance */
+#form {
+	width: 100%;
+	border: 1px solid #000;
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	flex-wrap: wrap;
+	border-radius: 10px;
+	padding-left: 2rem;
+}
+/* Submit button attributes */
+#submitBtn {
+	width: 20vw;
+	height: 5vh;
+	margin: 2rem auto;
+	background-color: #fab700;
+	border: 2px solid #f36a2a;
+	cursor: pointer;
+}

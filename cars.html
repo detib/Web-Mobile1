@@ -5,34 +5,42 @@
     <title>Final Project</title>
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/cars.css">
     <script defer src="./js/index.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="main">
-        <div class="navbar" id="top">
+    <div class="main" id="top">
+        <div class="navbar" id="navbar">
             <div class="nav-logo">
                 <div class="logo">
                     <a href="index.html" class="image"></a>
                 </div>
                 <div>
-                    <h6 class="name"><a href="index.html">Njazia Rent A Car</a></h6>
+                    <h6 class="name"><a href="index.html">'Washington' Rent A Car</a></h6>
                 </div>
             </div>
             <div class="nav-links">
                 <!-- nese nuk vyjn in the future delete extra classes -->
-                <div class="nav-link home"><a href="index.html">Home</a></div>  
-                <div class="nav-link about"><a href="about.html">About Us</a></div>  
-                <div class="nav-link cars"><a href="cars.html">Cars</a></div>  
-                <div class="nav-link reservations"><a href="reservations.html">Reservations</a></div>  
-                <div class="nav-link how"><a href="howTo.html">How To</a></div>  
+                <div class="nav-link home"><a href="index.html">Home</a></div>
+                <div class="nav-link about"><a href="about.html">About Us</a></div>
+                <div class="nav-link cars"><a href="cars.html">Cars</a></div>
+                <div class="nav-link reservations">
+                    <a href="reservations.html">Reservations</a>
+                </div>
+                <div class="nav-link how"><a href="howTo.html">How To</a></div>
             </div>
             <!-- width<1476px vjen qikjo -->
-            <nav  class="dropmenu" > <a href="javascript:void(0);" onclick="showMenu()"><div id="menu"></div></a>
+            <nav class="dropmenu">
+                <a href="javascript:void(0);" onclick="showMenu()">
+                    <div id="menu"></div>
+                </a>
                 <ul id="mobileMenu" class="dropbtn">
-                    <li><a href="javascript:void(0);" onclick="closeMenu()" id="closeButton">X</a></li>
+                    <li>
+                        <a href="javascript:void(0);" onclick="closeMenu()" id="closeButton">X</a>
+                    </li>
                     <li id="borderHome"><a href="index.html">Home</a></li>
                     <li><a href="about.html">About Us</a></li>
                     <li><a href="cars.html">Cars</a></li>
@@ -41,14 +49,94 @@
                 </ul>
             </nav>
         </div>
-        <div style="position: relative; top: 150px;">
-            <h1>cars</h1>
+
+        <div id="header">
+            <h2>Our cars</h2>
         </div>
-        <h1>Qitu me shtu sene footeri vjen vet posht</h1>
+        <div class="gallery">
+            <div class="carrow">
+                <div class="cars" id="carpic1"></div>
+                <div>
+                    <h3>Sedan</h3>
+                    <p>Grey, Gasoline, 5 Adults, 3 bags<br>4 doors</p>
+                </div>
+                <div><button class="buttonRes" onclick="wind"> <a href="reservations.html">Reserve now</a></button>
+                    <div>
+                    </div>
+                </div>
+            </div>
+            <div class="carrow">
+                <div class="cars" id="carpic2"></div>
+                <div>
+                    <h3>Sedan</h3>
+                    <p>White, Electric, 5 Adults, 4 bags<br>5 doors</p>
+                </div>
+                <div><button class="buttonRes"> <a href="reservations.html">Reserve now</a></button></div>
+            </div>
+            <div class="carrow">
+                <div class="cars" id="carpic3"></div>
+                <div>
+                    <h3>Sedan</h3>
+                    <p>Black, Electric, 5 Adults, 3 bags<br>5 doors</p>
+                </div>
+                <div><button class="buttonRes"> <a href="reservations.html">Reserve now</a></button></div>
+            </div>
+            <div class="carrow">
+                <div class="cars" id="carpic4"></div>
+                <div>
+                    <h3>Sedan</h3>
+                    <p>Black, Gasoline, 5 Adults, 3 bags<br>5 doors</p>
+                </div>
+                <div><button class="buttonRes"> <a href="reservations.html">Reserve now</a></button></div>
+            </div>
+            <div class="carrow">
+                <div class="cars" id="carpic5"></div>
+                <div>
+                    <h3>Convertible</h3>
+                    <p>Grey, Gasoline, 4 Adults, 2 bags<br>3 doors</p>
+                </div>
+                <div><button class="buttonRes"> <a href="reservations.html">Reserve now</a></button></div>
+            </div>
+            <div class="carrow">
+                <div class="cars" id="carpic6"></div>
+                <div>
+                    <h3>SUV</h3>
+                    <p>White, Diesel, 5 Adults, 4 bags<br>5 doors</p>
+                </div>
+                <div><button class="buttonRes"> <a href="reservations.html">Reserve now</a></button></div>
+            </div>
+            <div class="carrow">
+                <div class="cars" id="carpic7"></div>
+                <div>
+                    <h3>SUV</h3>
+                    <p>Blue, Gasoline, 7 Adults, 4 bags<br>5 doors</p>
+                </div>
+                <div><button class="buttonRes"> <a href="reservations.html">Reserve now</a></button></div>
+            </div>
+            <div class="carrow">
+                <div class="cars" id="carpic8"></div>
+                <div>
+                    <h3>SUV</h3>
+                    <p>Grey, Diesel, 5 Adults, 4 bags<br>5 doors</p>
+                </div>
+                <div><button class="buttonRes"> <a href="reservations.html">Reserve now</a></button></div>
+            </div>
+            <div class="carrow">
+                <div class="cars" id="carpic9"></div>
+                <div>
+                    <h3>SUV</h3>
+                    <p>White, Diesel, 5 Adults, 4 bags<br>5 doors</p>
+                </div>
+                <div><button class="buttonRes"> <a href="reservations.html">Reserve now</a></button></div>
+            </div>
+        </div>
+        <!-- Footer Start -->
         <div class="footer">
             <div class="copyright">
-                <h6 class="copyrightName name"><a href="index.html">Njazia Rent A Car</a></h6>
-                <h6 class="copyrightName">&copy;2021 Njazia Rent A Car.</h6>
+                <h6 class="copyrightName name">
+                    <a href="index.html">'Washington' Rent A Car</a>
+                </h6>
+                <h6 class="copyrightName">&copy;2021 'Washington' Rent A Car.</h6>
                 <h6 class="copyrightName">All Rights Reserved.</h6>
                 <h6 class="copyrightName">
                     <a href="">Terms</a> & <a href="">Privacy</a>
@@ -66,18 +154,14 @@
                 </a>
             </div>
         </div>
-        <div class="buttonScroll">
-            <a href="#top">
-                <button type="button" id="scrollToTopButton">
+        <div id="butoni">
+            <div id="showButton">
+                <a href="#top">
                     <div class="toTopButtonImage"></div>
-                </button>
-            </a>
+                </a>
+            </div>
         </div>
-    </div>
-
-    <!-- debugs -->
-    <!-- <div style="position: absolute; width: 100%; top: 50px;"></div> -->
-    <!-- <p style="position: absolute; top: 2000px;">Debug</p> -->
-    <!-- debugs -->
+        <!-- Footer End -->
+        </div>
 </body>
 </html>
