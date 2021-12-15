@@ -2,6 +2,7 @@
 	position: relative; /*position relative*/
 	content: url(../images/banner.jpg); /*image for the banner*/
 	width: 100%; /*100% width of the parent element (body)*/
+	filter: brightness(0.7); /* changes the brightness of the photo so the elements on top are visible */
 }
 .headers {
 	text-align: center; /*Align the text center*/
