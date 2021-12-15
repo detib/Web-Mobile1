@@ -126,14 +126,14 @@
             <div id="formDiv">
                 <h2>Make your reservation now!</h2>
                 <form name="reservationForm" action="#" onsubmit="return validateForm()" method="post" id="form">
-                    <label for="fname">Name:<br> <input type="text" name="fname" placeholder="Name"></label>
-                    <label for="sname">Surname:<br> <input type="text" name="sname" placeholder="Surname"></label>
-                    <label for="uLocation">Pick-up Location: <input type="text" name="uLocation"
+                    <label for="fname">Name:<br> <input required type="text" name="fname" placeholder="Name"></label>
+                    <label for="sname">Surname:<br> <input required type="text" name="sname" placeholder="Surname"></label>
+                    <label for="uLocation">Pick-up Location: <input required type="text" name="uLocation"
                             placeholder="Pick-up Location"></label>
-                    <label for="dLocation">Drop-off Location: <input type="text" name="dLocation"
+                    <label for="dLocation">Drop-off Location: <input required type="text" name="dLocation"
                             placeholder="Drop-off Location"></label>
-                    <label for="uDate">Pick-up Date: <input type="date" name="uDate"></label>
-                    <label for="dDate">Drop-off Date: <input type="date" name="dDate"></label>
+                    <label for="uDate">Pick-up Date: <input required type="date" name="uDate"></label>
+                    <label for="dDate">Drop-off Date: <input required type="date" name="dDate"></label>
                     <input type="submit" value="Submit" id="submitBtn">
                 </form>
             </div>

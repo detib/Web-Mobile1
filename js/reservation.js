@@ -42,27 +42,27 @@ function validateForm() {
 	let uDate = document.forms['reservationForm']['uDate']; //Varible to get pick up date
 	let dDate = document.forms['reservationForm']['dDate']; //Varible to get drop off date
 	//check if the fields are empty (all of them), and if that is the case make the border color red
-	if (fname.value == '') {
+	if (fname.value == null || fname.value == '') {
 		missing.push('name');
 		fname.style.borderColor = 'red';
 	}
-	if (sname.value == '') {
+	if (sname.value==null||sname.value == '') {
 		missing.push('surname');
 		sname.style.borderColor = 'red';
 	}
-	if (uLocation.value == '') {
+	if (uLocation.value==null||uLocation.value == '') {
 		missing.push('pick up location');
 		uLocation.style.borderColor = 'red';
 	}
-	if (dLocation.value == '') {
+	if (dLocation.value==null||dLocation.value == '') {
 		missing.push('drop-of location');
 		dLocation.style.borderColor = 'red';
 	}
-	if (uDate.value == '') {
+	if (uDate.value==null||uDate.value == '') {
 		missing.push('pick up date');
 		uDate.style.borderColor = 'red';
 	}
-	if (dDate.value == '') {
+	if (dDate.value==null||dDate.value == '') {
 		missing.push('drop-off location');
 		dDate.style.borderColor = 'red';
 	}
