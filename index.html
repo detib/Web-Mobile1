@@ -40,7 +40,6 @@
             </div>
             <div class="nav-links">
                 <!-- Navigation links div which contains 5 other divs with a tags as a child(it is done for the nav menu to lead somewhere) -->
-                <!-- nese nuk vyjn in the future delete extra classes -->
                 <div class="nav-link"><a href="index.html">Home</a></div>
                 <div class="nav-link"><a href="about.html">About Us</a></div>
                 <div class="nav-link"><a href="cars.html">Cars</a></div>
@@ -49,22 +48,23 @@
             </div>
             <!-- ===============================Hamburger menu starts here=================================== -->
             <!-- it contains two main elements and the second elements has 6 childer list-item tags with the first having the function to close the menu ("closeMenu()") -->
-            <nav class="dropmenu">
+
+            <div class="dropmenu">
                 <a onclick="showMenu()">
                     <div id="menu"></div>
                 </a>
-                <ul id="mobileMenu" class="dropbtn">
-                    <li><a onclick="closeMenu()" id="closeButton">X</a></li>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="cars.html">Cars</a></li>
-                    <li><a href="reservations.html">Reservations</a></li>
-                    <li><a href="howTo.html">How To</a></li>
-                </ul>
-            </nav>
+                <div id="mobileMenu" class="drop-menu-content">
+                    <div><a onclick="closeMenu()" id="closeMenu">X</a></div>
+                    <div><a href="index.html">Home</a></div>
+                    <div><a href="about.html">About Us</a></div>
+                    <div><a href="cars.html">Cars</a></div>
+                    <div><a href="reservations.html">Reservations</a></div>
+                    <div><a href="howTo.html">How To</a></div>
+                </div>
+            </div>
             <!-- ==============================Hamburger menu ends here==================================== -->
 
-        </div> <!-- Navbar html ends here -->
+        </div> <!-- Navbar div ends here -->
 
 
         <!-- ======================================================================= -->
@@ -219,7 +219,7 @@
             <!-- ======================= rent steps info component starts here=========================================== -->
             <div class="rent-steps-info"> <!-- div added for having the text on top of the tab menu -->
                 <h6>Renting a Car has never been easier</h6>
-                <p>With no time-consuming regulations at our company you can rent a car in 15 minutes.</p>
+                <p>With no time-consuming regulations, at our company you can rent a car in less than 15 minutes.</p>
             </div>
             <div class="easy-booking"> <!-- tab menu starts here -->
                 <div class="menu"> <!-- division for adding the tab menu options -->

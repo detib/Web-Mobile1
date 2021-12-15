@@ -1,24 +1,42 @@
-/* div {
-    border: 1px solid black;
-} */
+/* ================
+Deti Baholli
+=================*/
+/* ================
+Veton Klinaku
+=================*/
+/* ================
+Eris Llapashtica
+=================*/
+/* ================
+Lumi Zhubi
+=================*/
+/* ================
+Mete Salihi
+=================*/
+
 
 /* ============================================
-Main body style and .main div style
+html,body,::selection, .main, styles below
+html declares the font-size for all the page, in this case we declare font size with "rem",
+1 rem is equal to the font-size of the parent element, in this case 1 rem is 16px and 5rems are 80px,
+we use rems because it is easier to make the page responsive since we can change the whole pages font-size with 1 change in font-size in html tag
 body changes the font-family to poppins, which is also imported
 .main positions the page to each corner 
 so we do not have white space above and to the left of the page
 ============================================ */
 html {
-    font-size: 16px;
+    font-size: 16px; 
+    scroll-behavior: smooth;
 }
 
 body {
     font-family: 'Poppins';
 }
 
-/* ::selection {
-    background-color: white;
-} */
+::selection {
+    -webkit-text-stroke: 1px blue;
+    color: transparent;
+}
 
 .main {
     position: absolute;
@@ -26,14 +44,25 @@ body {
     left: 0;
     width: 100%;
 }
+/*============================================
+Some info for the css added here.
+to position elements we used flexbox a lot
+flexbox in deafult positions elements in a row
+if flex-direction is column or column-reverse then flex items are positioned in some other way
+justify content is mostly centered, for flex-direction:row justify content moves the elements along the x-axis, while align-items along the y-axis
+for flex-direction:column justify content moves the elements along the y axis, while align- items moves them along the x-axis.
+z-indexes are in some overestimated values like 2000,3000 etc because we add them in order to make sure that element stays on top
+since most probably we wont have that much elements here, in other cases it can be used with higher values.
+============================================*/
+
 
 /* ============================================
     the styles below are for the navbar and apply to all five pages
 ============================================ */
 .navbar {
-    position: fixed;  /* Sticky position so the navbar is always on top of the page even if we scroll */
+    position: fixed;  /* fixed position so the navbar is always on top of the page even if we scroll */
     top: 0;  /* top 0 for the navbar to be on top */
-    display: flex;  /* Creating a flexbox to display items as flex elements then position them easily */
+    display: flex;  /* This creates a flexbox which makes it easier to position elements relatively to each other*/  /* Creating a flexbox to display items as flex elements then position them easily */
     justify-content: space-between;  /* Since we have 2 main elements in the navbar we give this property to push both elements away from each other to the opposite ends */
     align-items: center;  /* Since we have a deafult flex-direction:row this property with align items in the center vertically */
     z-index: 2000;  /* z-index is 2000 so it is always on top, 2000 value is to overestimate so we do not need to go back and change if we add more elements */
@@ -41,7 +70,7 @@ body {
     width: 90%;  /* this is not 100% so we add padding later and then we have 5% space on both ends */
     background-color: rgba(0, 0, 0, 0);  /* background-color black */
     padding: 0 5%;  /* The padding to push elements away from the corners */
-    transition: background-color 0.5s;
+    transition: background-color 0.5s; /* transtion because the background-color is changed with javascript */
 }
 
 .nav-logo {
@@ -50,290 +79,237 @@ body {
 }
 
 .logo {
-    display: inherit;
+    display: inherit; /* display is inherited from the parent element which in this case is nav-logo */
 }
 .image {
-    content: url(../images/logo.png);
+    content: url(../images/logo.png); /* logo added through css */
 }
 .name {
-    font-size: 1.75rem;
-    margin: 0 25px;
-    padding: 9% 0;
+    font-size: 1.75rem; /* font size in rems */
+    margin: 0 25px; /* margins to space the logo and the name */
+    padding: 9% 0; /* top and bottom margins to stay positioned on the middle */
 }
 
 .name a {
-    text-decoration: none;
-    color: white;
-    text-shadow: 5px 5px 10px  gray;
+    text-decoration: none; /* since page name is a link we remove text-decorations */
+    color: white; /* change the color */
 
 }
 
 .nav-links {
-    display: flex;
-    transition: display 0.6s ease;
+    display: flex; /* This creates a flexbox which makes it easier to position elements relatively to each other*/
 }
 
 .nav-link {
-    margin: 0 25px;
-    padding: 20px 0;
-    transition: all 0.6s ease;
+    margin: 0 25px; /* space links away from each other */
+    padding: 20px 0; /* space links away from the top and also giving space to the bottom */
 }
 
 .nav-link a {
-    text-decoration: none;
-    font-size: 1.25em;
-    font-weight: bold;
-    color: white;
-    text-shadow: 5px 5px 10px  gray;
-    transition: all 0.6s ease;
+    text-decoration: none; /* text-decoration is removed */
+    font-size: 1.25em; /* font size in rems */
+    font-weight: bold; /* font weight is given as bold */
+    color: white; /* font-color is white */
 }
+
+
+/* =============================
+here we used the ::after and ::before pseudo elements
+these add the content and style to that content BEFORE and AFTER the element in html
+this gives the content of none since we only need to mimic an underline with height of 1px
+width is 0 since after the hover effect it will be 100%, transition is .3s for all the elements which are changed
+in this case the ::before and ::after pseudo elements add an underline and overline when hovered
+================================*/
+.nav-link a::after, .nav-link a::before { 
+    content: "";
+    height: 1px;
+    width: 0;
+    display: block;
+    background: white;
+    transition: 0.3s;
+    margin: auto;
+}
+
+.nav-link a:hover::after, .nav-link a:hover::before {
+    width: 100%;
+}
+/* ======================================================= */
+
 
 .dropmenu {
-    display: none;
-    transition: all 0.6s ease;
+    display: none; /* display is none since we only need this if we use the website on smaller screens */
 }
+/* ============================================
+    Navbar styles end here
+============================================ */
 
-.dropbtn {
-    transition: all 0.6s ease;
-}
 
 /* ============================================
-    Homepage
+    Homepage styles
 ============================================ */
 
 .homepage {
-    position: relative;
-    top: 0;
+    position: relative; /* position is declared relative to take space on the page but needing to declare top property */
+    top: 0; /* top is given 0 since we need the heroimage to stay on the top of the page and have the navbar on top */
 }
 
 .homepageImage {
-    width: 100%;
+    width: 100%; /* 100% so that it takes the whole space avaiable */
 }
 
 .homepageImage img{
-    width: 100%;
-    filter: brightness(0.4);
+    width: 100%; /* 100% so that it takes the whole space avaiable */
+    filter: brightness(0.4); /* dim the brightness so that we can put elements on top while having the focus on the elements */
 }
 
 .text {
-    position: absolute;
-    width: 100%;
-    left: 0;
-    top: 330px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white;
+    position: absolute; /* absolute but still relative to the homepage */
+    width: 100%; /* take whole space */
+    top: 330px; /* stay 330px from the top of the page */
+    display: flex;  /* This creates a flexbox which makes it easier to position elements relatively to each other*/
+    flex-direction: column; /* changes the flex-direction to column (refer above for extra details) */
+    align-items: center; /* in this case aligns items in the center along the x-axis */
+    color: white; /* text-color */
 }
 
 .text h6 {
-    margin: 0;
+    margin: 0; /* margin 0 so that it does not take more space than neede */
 }
 
-.linkTxt {
-    text-decoration: none;
-    color: white;
-    background-color: #fab700;
-    text-transform: uppercase;
-    font-weight: 800;
-    padding: 25px 60px;
-    font-size: 2rem;
-    transition: 0.3s;
-    margin-top: 50px;
+.linkTxt { /* style for the link acting as a button */
+    text-decoration: none; /* no need for text-decoratins */
+    color: white; /* text-color */
+    background-color: #fab700; /* background-color */
+    text-transform: uppercase; /* to make the text all uppercase */
+    font-weight: 800; /* "boldness" of the text */
+    padding: 25px 60px; /* padding to mimic a box */
+    font-size: 2rem; /* font size in rems */
+    transition: 0.3s; /* needed because we have a hover effect */
+    margin-top: 50px; /* moving the element 50px from the top element */
 }
 
 .linkTxt:hover {
-    border: 1px solid #fab700;
-    background-color: transparent;
-    transform: scale(1.05);
-    font-size: 2.1rem;
-    color: #fab700;
+    border: 1px solid #fab700; /* adding a border since the background-color will be transparent */
+    background-color: transparent; /* background-color */
+    transform: scale(1.05); /* it will grow on hover by 5% */
+    font-size: 2.1rem; /* font size in rems */
+    color: #fab700; /* text-color */
 }
 
 #firstTxt {
-    font-size: 2rem;
+    font-size: 2rem; /* font size in rems */
 }
 
 #scndTxt{
-    font-size: 4rem;
-    text-transform: uppercase;
+    font-size: 4rem; /* font size in rems 4rem = 64px*/
+    text-transform: uppercase; /* to make the text all uppercase */
 }
 
 .why-us {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 100px;
-    margin-bottom: 100px;
+    display: flex;  /* This creates a flexbox which makes it easier to position elements relatively to each other*/
+    justify-content: center; /**/
+    align-items: center; /**/
+    flex-direction: column; /**/
+    margin-top: 100px; /**/
+    margin-bottom: 100px; /**/
 }
 
 .question {
-    display: inherit;
-    flex-direction: column;
-    align-items: center;
-    text-transform: uppercase;
+    display: inherit; /**/
+    flex-direction: column; /**/
+    align-items: center; /**/
+    text-transform: uppercase; /**/
 }
 
 .question h6 {
-    font-size: 3rem;
-    margin: 0;
+    font-size: 3rem; /* font size in rems */
+    margin: 0; /**/
 }
 
 .question p {
-    font-size: 1.5rem;
-    color: grey;
+    font-size: 1.5rem; /* font size in rems */
+    color: grey; /**/
 }
 
 .services {
-    width: 75%;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 50px;
+    width: 75%; /* give the whole box a width of 75% */
+    display: flex; /* This creates a flexbox which makes it easier to position elements relatively to each other*/ 
+    flex-wrap: wrap; /* flex-wrap says that if the flexbox does not have space for all the items to make a new row and store them there */
+    gap: 50px; /* this adds a gap of 50px between flex-items */
 }
 
 .services-item {
-    width: 26%;
-    background-color: #fab700;
-    height: 300px;
-    border-radius: 15px;
-    display: inherit;
-    flex-direction: column;
-    justify-content: center;
-    padding: 0 2%;
-    box-shadow: -3px 3px 5px rgba(0, 0, 0, 0.7);
-    transition: 0.5s;
+    width: 26%; /* width of each card is intended to be 30% but is 26% since */
+    background-color: #fab700; /*  */
+    height: 300px; /*  */
+    border-radius: 15px; /*  */
+    display: inherit; /*  */
+    flex-direction: column; /*  */
+    justify-content: center; /*  */
+    padding: 0 2%; /*  */
+    box-shadow: -3px 3px 5px rgba(0, 0, 0, 0.7); /* -3px gives 3px shadow tothe left 3 px to the bottom and 5px blur, with black 70% opacity color */
+    transition: 0.5s; /* all transitions happen in 500ms */
 }
 
 .services-item:hover {
-    transform: translateY(-35px) scale(1.1);
-    box-shadow: -6px 6px 25px rgba(0, 0, 0, 0.7);
-    background-color: rgb(226, 166, 0);
+    transform: translateY(-35px) scale(1.1); /* translateY moves the item up by 35px, scale(1.1) grows the item by 10% */
+    box-shadow: -6px 6px 25px rgba(0, 0, 0, 0.7); /* 6px to the left 6px bottom 25px spread of the same color */
+    background-color: rgb(226, 166, 0); /* background - color */
 }
 
 .services-item p {
-    color: white;
+    color: white; /*  */
 }
 
 .services-item-photo {
-    display: flex;
-    align-items: baseline;
-    gap: 15px;
-    text-transform: uppercase;
+    display: flex; /* This creates a flexbox which makes it easier to position elements relatively to each other*/
+    align-items: baseline; /* this align-item is for the flexbox of the photo and the text and aligns them both to the bottom, so they start at the same line */
+    gap: 15px; /* 15px gap for flex-items */
+    text-transform: uppercase; /* text is uppercase */
 }
 .services-item-photo h6{
-    margin: 0;
-    font-size: 1.7rem;
-}
-.contactUs {
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.contactUs img {
-    display: block; /* For some reason the image has some space below that is not a margin or padding but by adding display:block that is fixed */
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    filter: brightness(0.7);
-}
-
-.supportTeam {
-    position: absolute;
-    display: inherit;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-}
-
-.supportTeam h6 {
-    font-size: 2.1rem;
-    color: white;
-    margin: 0;
-}
-
-.contact-us-link {
-    margin: 0;
-    transform: none !important;
-    text-decoration: none;
-    color: white;
-    font-size: 1rem;
-    background-color: #fab700;
-    text-transform: uppercase;
-    font-weight: 800;
-    padding: 25px 60px;
-    transition: 0.3s;
-    margin-bottom: 100px;
-    border: 1px solid #fab700;
-}
-
-.contact-us-link:hover {
-    transform: none !important;
-    background-color: transparent;
-    padding: 20px 35px;
-    font-size: 1.5rem;
-    color: #fab700;
-}
+    margin: 0; /*  */
+    font-size: 1.7rem; /* font size in rems */
+} 
 
 .quality {
-    width: 60%;
-    margin: 150px 20% 100px 20%;
-    display: flex;
+    width: 60%; /* 60% width of the page */
+    margin: 150px 20% 100px 20%; /* margin to give space top and bottom and also left and right, left and right are for positioning the element in the middle */
+    display: flex; /* This creates a flexbox which makes it easier to position elements relatively to each other*/
     flex-direction: column;
-    row-gap: 50px;
+    row-gap: 50px; /* this is to give gap between rows of flex-items */
 }
 
 .car-quality {
-    display: flex;
-    gap: 50px;
+    display: flex; /* This creates a flexbox which makes it easier to position elements relatively to each other*/ 
+    gap: 50px; /* 50px gap between flex-items */
 }
 
 .car-quality div {
-    display: flex;
-    flex-direction: column;
+    display: flex; /* This creates a flexbox which makes it easier to position elements relatively to each other*/
+    flex-direction: column; /* changes the direction of the flex to column */
 }
 
 .car-quality h6 {
-    font-size: 2rem;
-    margin: 0;
-    text-transform: uppercase;
+    font-size: 2rem; /* font size in rems */
+    margin: 0; /*  */
+    text-transform: uppercase; /* text to uppercase */
 }
 
 .car-quality p {
-    font-size: 1.3rem;
+    font-size: 1.3rem; /* font size in rems */
 }
 
 .our-fleet-link {
-    padding: 2% 20%;
-    text-align: center;
-    width: 33%;
-    font-size: 1rem;
-    margin: 0;
+    padding: 2% 20%; /* link that looks like a button, gives padding 2% to top and bottom and 20% left and right*/
+    text-align: center; /*  */
+    width: 33%; /*  */
+    font-size: 1rem; /* font size in rems */
+    margin: 0; /*  */
 }
 
 .our-fleet-link:hover {
-    font-size: 1.1rem;
-}
-
-.slideshow-next-prev-buttons {
-    display: flex;
-    flex-direction: row !important;
-    justify-content: center;
-}
-
-.next-prev-buttons { 
-    /* width: 150px; */
-    padding: 0 5%;
-    color: #fab700;
-    cursor: pointer;
-}
-
-.next-prev-buttons:hover {
-    background-color: rgba(0, 0, 0, 0.1);
+    font-size: 1.1rem; /* font-size in rems */
 }
 
 #slideshow-buttons {
@@ -344,287 +320,365 @@ body {
 #fleetImg {
     width: 100%;
 }
-/* ===================================================
-======================Should be removed unless used=============================
-===================================================*/
-
-.whyUs {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    background: linear-gradient(to bottom , white , rgb(210,210,210));
-    align-items: left;
-    width: 50%;
-    padding: 190px 25%;
+.slideshow-next-prev-buttons {
+    display: flex; /* This creates a flexbox which makes it easier to position elements relatively to each other*/ 
+    flex-direction: row !important; /* changes the flex-direction to row, as it is column from the parent element, the !important tag makes this property dominant over others */
+    justify-content: center; /*  */
 }
 
-.details p {
-    margin: 0;
-    font-size: 18px;
+.next-prev-buttons { 
+    padding: 0 5%; /* 5% padding to the left and right */
+    color: #fab700; /* text-color */
+    cursor: pointer; /* when this is hovered the cursor is changed to pointer, which gives the hand with the clicking index finger */
 }
 
-/* ===================================================
-===================================================
-===================================================*/
+.next-prev-buttons:hover {
+    background-color: rgba(0, 0, 0, 0.1); /* 10% opacity black backround-color */
+}
 
-/* Achievments division starts here and ends after the images are added */
+
+/* =====================================================================
+    Achievments division starts here and ends after the images are added 
+========================================================================*/
 .achievments {
-    position: relative;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;    
-    padding: 8.3% 0;
-    text-transform: uppercase;
-    box-shadow: 5px 5px 25px black;
+    position: relative; /*  */
+    margin: 0; /*  */
+    padding: 0; /*  */
+    display: flex; /* This creates a flexbox which makes it easier to position elements relatively to each other*/ 
+    justify-content: center; /*  */
+    align-items: center; /*  */
+    color: white;     /*  */
+    text-transform: uppercase; /* text to uppercase */
+    box-shadow: 0 10px 20px black, 10px 0 20px black; /* 10px shadow with 20px blur on top and bottom, in this case we have 2 seperate shadows since the box-shadow property allows us to give multiple shadows seperated with a comma */
 }
 
 .achievments img {
-    position: absolute;
-    filter: brightness(0.3);
-    width: 100%;
+    position: relative; /* to position it relatively to the flow of the page */
+    filter: brightness(0.3); /* dim the brightness so that we have the content on top as a focus */
+    width: 100%; /* to take the whole space avaiable */
 }
 
 .achievment-text {
-    display: flex;
-    position: absolute;
-    justify-content: center;
+    display: flex; /* This creates a flexbox which makes it easier to position elements relatively to each other*/ 
+    position: absolute; /* to position on top of the image */
+    justify-content: center; /* centering the content */
 }
 
 .counter-icon {
-    display: inherit;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 20%;
+    display: inherit; /* inhereting the display property from the parent */
+    flex-direction: column; /* change the flex-direction */
+    justify-content: center; /*  */
+    align-items: center; /*  */
+    width: 20%; /* width of each element on the counter component */
 }
 
 .counter-icon h6 {
-    font-size: 3.1rem;
-    margin: 0;
+    font-size: 3.1rem; /* font size in rems */
+    margin: 0; /*  */
 }
 
 .counter-icon p {
-    margin: 0;
+    margin: 0; /*  */
 }
 
-/* Images for the counters added through css and given the same width so they are the same size */
+/* ==================================================================================================
+        Images for the counters added through css and given the same width so they are the same size 
+==================================================================================================*/
 #clients {
-    content: url(../images/homepage/people.png);
-    width: 15%;
+    content: url(../images/homepage/people.png); /*  */
+    width: 15%; /*  */
 }
 
 #cities {
-    content: url(../images/homepage/citiesIcon.png);
-    width: 15%;
+    content: url(../images/homepage/citiesIcon.png); /*  */
+    width: 15%; /*  */
 }
 
 #members {
-    content: url(../images/homepage/membersIcon.png);
-    width: 15%;
+    content: url(../images/homepage/membersIcon.png); /*  */
+    width: 15%; /*  */
 }
 
 #cars {
-    content: url(../images/homepage/carIcon.png);
-    width: 15%;
+    content: url(../images/homepage/carIcon.png); /*  */
+    width: 15%; /*  */
 }
 
+/* =================================================
+            Achievment division ends here
+==================================================*/
+
 .easy-booking {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    margin: 3% 25% 10% 25%;
+    display: flex; /* This creates a flexbox which makes it easier to position elements relatively to each other*/ 
+    flex-direction: column; /*  */
+    width: 50%; /*  */
+    margin: 3% 25% 10% 25%; /* margins : 3% on top, 25% right, 10% bottom, 25% left */
 }
 
 .rent-steps-info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: flex; /* This creates a flexbox which makes it easier to position elements relatively to each other*/ 
+    flex-direction: column; /*  */
+    align-items: center; /*  */
 }
 
 .rent-steps-info h6 {
-    font-size: 3rem;
-    margin: 100px 0 0 0;
-    text-transform: uppercase;
+    font-size: 3rem; /* font size in rems */
+    margin: 100px 0 0 0; /* 100px on top */
+    text-transform: uppercase; /*  */
 }
 .rent-steps-info p {
-    font-size: 1rem;
-    color: grey;
-    margin: 0;
+    font-size: 1rem; /* font size in rems */
+    color: grey; /*  */
+    margin: 0; /*  */
 }
 
 .menu {
-    display: flex;
-    justify-content: center;
+    display: flex; /* This creates a flexbox which makes it easier to position elements relatively to each other*/
+    justify-content: center; /*  */
 }
 
 .menu a {
-    width: 100%;
-    cursor: pointer;
+    width: 100%; /*  */
+    cursor: pointer; /* change the cursor to the index finger pointer, (to seem clickable) */
 }
 
 
 .steps {
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #9e7400;
-    border-radius: 30px 30px 0 0;
-    z-index: 2000;
-    transition: 0.5s;
+    height: 60px; /*  */
+    display: flex; /* This creates a flexbox which makes it easier to position elements relatively to each other*/ 
+    align-items: center; /*  */
+    justify-content: center; /*  */
+    background-color: #9e7400; /*  */
+    border-radius: 30px 30px 0 0; /* left top border- 30px, right top border- 30px, bottom borders-none */
+    z-index: 2000; /* so the shadow of the box below does not fall on top of this element */
+    transition: 0.5s; /* all transitions happen in 500ms */
+    font-weight: 800; /* font-weight is equal to 800, bold is 700 */
 }
+
 .menu a:hover {
-    font-size: 1.3rem;
+    font-size: 1.3rem; /* font size in rems */
 }
 
 .easy-booking-content {
-    display: flex;
-    position: relative;
+    display: flex; /* This creates a flexbox which makes it easier to position elements relatively to each other*/ 
+    position: relative; /*  */
 }
 
 .easy-booking-content-item {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 5% 15%;
-    background-color: #ffffff;
-    box-shadow: -15px 15px 35px -15px black;
-    border-radius: 0 0 15px 15px;
-    z-index: 0;
+    width: 100%; /*  */
+    display: flex; /* This creates a flexbox which makes it easier to position elements relatively to each other*/ 
+    flex-direction: column; /*  */
+    align-items: center; /*  */
+    padding: 5% 15%; /* 5% padding on top and bottom, 15% left and right */
+    background-color: #ffffff; /*  */
+    box-shadow: -15px 15px 35px -15px black; /*  */
+    border-radius: 0 0 15px 15px; /* top corners 0px radius, bottom corners 15px radius */
+    z-index: 0; /* to stay below the boxes above so the shadow does not overlap them */
 }
 
 .easy-booking-content-item div {
-    text-align: center;
+    text-align: center;  /* aligns text in the center */
 }
 
 .easy-booking-content-item h6 {
-    font-size: 2.2rem;
-    margin: 0;
-    text-transform: uppercase;
+    font-size: 2.2rem; /* font size in rems */
+    margin: 0;  /*  */
+    text-transform: uppercase;  /*  */
 }
 
 .easy-booking-content-item p {
-    font-size: 1rem;
-    margin: 0;
+    font-size: 1rem; /* font size in rems */
+    margin: 0;  /*  */
 }
 
 #book-final-item {
-    color: #000;
-    text-decoration: none;
-    margin-left: 10px;
-    padding: 5px;
+    color: #000; /*  */
+    text-decoration: none; /*  */
+    margin-left: 10px; /* 10px left-margin */
+    padding: 5px; /* 5px padding all around */
 }
 
 #book-final-item:hover {
-    text-decoration: underline;
+    text-decoration: underline; /* this is a link that we do not want to design but also to be able to detect that is a link so we add underline on hover */
 }
 
 #item1 {
-    display: none;
+    display: none; /* display none on these because we change them with javascript */
 }
 
 #item2 {
-    display: none;
+    display: none; /* display none on these because we change them with javascript */
 }
 
 #item3 {
-    display: none;
+    display: none; /* display none on these because we change them with javascript */
 }
 
+.contactUs {
+    position: relative; /*  */
+    bottom: 0; /*  */
+    width: 100%; /*  */
+    display: flex; /* This creates a flexbox which makes it easier to position elements relatively to each other*/
+    justify-content: center; /*  */
+    align-items: center; /*  */
+}
+.contactUs img {
+    display: block; /* For some reason the image has some space below that is not a margin or padding but by adding display:block that is fixed */
+    width: 100%; /*  */
+    margin: 0; /*  */
+    padding: 0; /*  */
+    filter: brightness(0.7); /* brightness is set to 70% */
+}
+
+.supportTeam {
+    position: absolute; /*  */
+    display: inherit; /*  */
+    flex-direction: column; /*  */
+    align-items: center; /*  */
+    gap: 20px; /* 20px gap between flex-items which are displayed in a column flex-direction */
+}
+
+.supportTeam h6 {
+    font-size: 2.1rem; /* font size in rems */
+    color: white; /*  */
+    margin: 0; /*  */
+}
+
+.contact-us-link {
+    margin: 0; /*  */
+    transform: none !important; /* transform is set to none and also it is labeled as !important so that this element takes this property */
+    text-decoration: none; /*  */
+    color: white; /*  */
+    font-size: 1rem; /* font size in rems */
+    background-color: #fab700; /*  */
+    text-transform: uppercase; /*  */
+    font-weight: 800; /* 100 more than "bold" */
+    padding: 25px 60px; /* 25px padding on top and bottom and 60px left and right */
+    transition: 0.3s; /* all transitions happen within 300ms */
+    margin-bottom: 100px; /* adds a 100px margin at the bottom */
+    border: 1px solid #fab700; /*  */
+}
+
+.contact-us-link:hover {
+    transform: none !important; /* transform is set to none and also it is labeled as !important so that this element takes this property */
+    background-color: transparent; /* background color on hover is changed to transparent */
+    padding: 20px 35px; /* we change the padding so that when the font-size changes it does not grow the box */
+    font-size: 1.5rem; /* font size in rems */
+    color: #fab700; /* text-color on hover */
+}
+
+/*=========================================================
+For responsivness of the page we added the @media screen and set it to max-width:1400px
+This means that if a screen is 1400px or lower these properties will take place.
+===========================================================*/
 @media screen and (max-width: 1400px) {
     html {
-        font-size: 12px;
+        font-size: 10px; /* font-size is changed to 10px so that all the page changes relatively to this */
     }
-
+    
     .main {
         overflow-x: hidden; /* This is used to hide the mobile menu to the side.
         It is on the side by the "right" property, but it overflows,
-         so, this hides that overflow making the menu seem to come from the right side out of nowhere */
-        }
+        so, this hides that overflow making the menu seem to come from the right side out of nowhere */
+    }
 
     .nav-links {
-        display: none;
+        display: none; /* since the hamburger menu will take its place we do not need these */
     }
 
     .dropmenu{
-        display: block;
-        font-weight: bold;
-        margin-right: 50px;
-        overflow-x: hidden;
+        display: block; /* it is changed to block since the screen is smaller we need this instead of the nav-links */
+        font-weight: 700; /* bold */
+        margin-right: 50px; /* 50px margin to the right */
+        overflow-x: hidden; /* if this overflows along the x-axis, this will not be shown */
     }
     #menu {
-        content: url(../images/menu.png);
-        width: 60px;
-        border-radius: 5px;
-        cursor: pointer;
+        content: url(../images/menu.png); /* image added */
+        width: 60px; /* declared only width so we do not distort the image */
+        cursor: pointer; /* make the image seem clickable to the user */
     }
     
-    .dropbtn {
-        overflow-x: hidden !important;
-        position: absolute;
-        margin: 0;
-        right: 0;
-        top: 0;
-        z-index: 1;
+    .drop-menu-content {
+        overflow-x: hidden !important;  /* this will overflow to the right since this menu is hidden to the right with the translateX property, and we need to hide it from the user */
+        position: absolute;  /* positioned absolutely on the top right corner of the page */
+        margin: 0;  /*  */
+        right: 0;  /*  */
+        top: 0;  /*  */
         height: auto;
-        width: 200px;
-        transform: translateX(200px);
-        transition: transform 0.3s;
-        background-color: #000;
-        list-style-type: none;
-        border-radius: 0 0 0 35px;
-        text-align: left;
-        padding: 0;
-    }
-    
-    .dropbtn li {
-        margin: 25px 20px;
-    }
-    
-    .dropbtn li a{
-        text-decoration: none;
-        color: #fab700;
-        display: block;
-        width: auto;
-        padding: 8px 8px 8px 32px;
-    }
-    
-    #closeButton {
-        text-align: right;
-        color: #fab700;
-        cursor: pointer;
-    }
-    
-    .text {
-        top: 250px;
-    }
-    
-    #frst-component {
-        flex-direction: column;
-    }
-    #scnd-component {
-        flex-direction: column-reverse;
-    }
-    .our-fleet-link {
-        width: 20%;
-        padding: 2% 1%;
-    }
-    .services {
+        width: 200px;  /*  */
+        transform: translateX(200px);  /* pushed the item 200px to the right along the x-axis */
+        transition: transform 0.3s;  /* transform will change in 300ms */
+        background-color: #000; /*  */
+        border-radius: 0 0 0 35px;  /* bottom left corner has a 35px border radius */
+        padding: 0; /*  */
+        display: flex;
         flex-direction: column;
         align-items: center;
     }
+    
+    .drop-menu-content div {
+        margin: 25px 20px; /* 25px margin on top and bottom and 20px left and right */
+    }
+    
+    .drop-menu-content div a{
+        text-decoration: none; /*  */
+        color: #fab700; /*  */
+        display: block; /*  */
+        width: max-content; /* width of the div that contains the links */
+        padding: 0; /*  */
+    }
+
+    #closeMenu {
+        cursor: pointer; /* to make it look clickable */
+    }
+     /* ======================================================
+            before and after pseudo elements explained above
+            this is the same effect
+     ======================================================*/
+    .drop-menu-content div a::after, .drop-menu-content div a::before { 
+        content: "";
+        height: 1px;
+        width: 0;
+        display: block;
+        background: white;
+        transition: 0.3s;
+        margin: auto;
+    }
+    
+    .drop-menu-content div a:hover::after, .drop-menu-content div a:hover::before {
+        width: 100%;
+    }
+    /* ======================================================
+            before and after pseudo elements explained above
+            this is the same effect
+     ======================================================*/
+
+    .text {
+        top: 250px; /*  */
+    }
+    
+    #frst-component {
+        flex-direction: column; /* change the flex-direction to column for small screen for more compatibility */
+    }
+    #scnd-component {
+        flex-direction: column-reverse;  /* change the flex-direction to column reverse so that the bottom elements appear on top on column format */
+    }
+    .our-fleet-link {
+        width: 20%; /*  */
+        padding: 2% 1%; /*  */
+    }
+    .services {
+        flex-direction: column; /* changed the flex-direction again for small screen compatibility */
+        align-items: center; /*  */
+    }
     #fleetImg {
-        width: 70%;
+        width: 70%; /*  */
     }
     #slideshow-buttons {
-        display: flex;
-        flex-direction: column;
+        display: flex; /* This creates a flexbox which makes it easier to position elements relatively to each other*/
+        flex-direction: column; /*  */
     }
     .slideshow-next-prev-buttons {
-        justify-content: left;
+        justify-content: left; /* move the buttons that change the images on the slideshow to the left so they do not look out of place */
     }
 }
