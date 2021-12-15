@@ -1,6 +1,10 @@
 #header {
 	text-align: center; /*Align the text center*/
-	margin-top: 5%; /*5% margin on top of elements*/
+	margin-top: 10%; /*5% margin on top of elements*/
+}
+
+#header h2 {
+    font-size: 3rem;
 }
 a{
     text-decoration: none;
@@ -21,33 +25,46 @@ h3, p {
   }
 .buttonRes {
     padding: 10px 20px;
-    border: 0;
-    font-size: 85%;
-    background-color:white;
+    border: none;
+    font-size: 1rem;
     margin-left: auto;
     margin-right: auto;
     display: block;
-    margin-top: 22%;
-    margin-bottom: 22%;
+    margin-bottom: 5%;
     cursor: pointer;  
-    font-family:Verdana, Geneva, Tahoma, sans-serif ;
     border-radius: 7%;
+    transition: 0.4s; 
+    background-color: #fab700;
 }
 .buttonRes:hover {
-    font-size: 100%;
-    background-color: whitesmoke;
-    box-shadow: -8px 8px 12px dimgray;
-    transition: 390ms; 
+    background-color: #dfa300;
+    box-shadow: 1px 1px 10px rgba(105, 105, 105,0.5);
 }
 .carrow {
     width: 30%;
-    background-color: #9FACE6;
     background-image: linear-gradient(180deg, #fab700 0%, #eefa4c 100%);
     border-radius: 12px;
     box-shadow: -8px 8px 12px dimgray;
+    transition: 0.4s;
 }
+
+.car-info-text h3 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+.car-info-text p {
+    font-size: 1rem;
+}
+
 .carrow .cars {
     width: 100%;
+}
+
+.carrow:hover {
+    transform: translateY(-30px);
+    box-shadow: -16px 16px 32px dimgray;
+    z-index: 200;
 }
 #carpic1 {
     content: url(../images/cars/toyota.png);
