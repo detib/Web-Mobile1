@@ -4,31 +4,42 @@
 <head>
     <meta charset="UTF-8">
     <title>Final Project</title>
+    <!-- Linking the style file  -->
     <link rel="stylesheet" href="CSS/style.css">
-    <!-- Qito dyja posht shtoja prap aty  -->
+    <!-- Linking the style file for the footer  -->
     <link rel="stylesheet" href="css/footer.css">
+    <!-- Linking the javascript file  -->
     <script defer src="./js/index.js"></script>
-    <!-- qiky script nalt osht veq boja "defer" -->
+    <!-- javascript is defered so that it waits until the page loads to check for the variables,
+            this is done because in pages with a lot of content javascript can search for the 
+            id's when the element has not loaded yet and then return an error -->
+
+    <!-- The linkings below are for a special font which we use in all the pages(poppins) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 </head>
 
 <body onload="slider(), firstItem()">
+    <!-- when body loads it calls two functions, slider, and firstItem(slider is used for the slideshow at the top of the page and firstItem is used for the tab menu which is before the contact us) -->
     <div class="main" id="top">
-        <!-- id = "top" e shton qaty-->
+        <!-- The parent div of all the elements opens here and contains all elements seen on the page -->
         <div class="navbar" id="navbar">
-            <!-- id = "navbar" ntnjejtin ven-->
+            <!-- Division for the navbar which 2 div and the nav tag, the two divs are for the navigation links and the logo and name, the nav tag is for the hamburger menu which appears on small screens -->
             <div class="nav-logo">
+                <!-- the left side div for the logo and the name -->
                 <div class="logo">
+                    <!-- div for adding the photo through css and a tag so it can lead to the homepage -->
                     <a href="index.html" class="image"></a>
                 </div>
                 <div>
+                    <!-- Div tag for the name -->
                     <h6 class="name"><a href="index.html">Njazia&nbsp;Rent&nbsp;A&nbsp;Car</a></h6>
                     <!-- &nbsp; between words so they do not break if the screen is smaller-->
                 </div>
             </div>
             <div class="nav-links">
+                <!-- Navigation links div which contains 5 other divs with a tags as a child(it is done for the nav menu to lead somewhere) -->
                 <!-- nese nuk vyjn in the future delete extra classes -->
                 <div class="nav-link"><a href="index.html">Home</a></div>
                 <div class="nav-link"><a href="about.html">About Us</a></div>
@@ -36,7 +47,8 @@
                 <div class="nav-link"><a href="reservations.html">Reservations</a></div>
                 <div class="nav-link"><a href="howTo.html">How To</a></div>
             </div>
-            <!-- width<1578px vjen qikjo -->
+            <!-- ===============================Hamburger menu starts here=================================== -->
+            <!-- it contains two main elements and the second elements has 6 childer list-item tags with the first having the function to close the menu ("closeMenu()") -->
             <nav class="dropmenu">
                 <a onclick="showMenu()">
                     <div id="menu"></div>
@@ -50,36 +62,54 @@
                     <li><a href="howTo.html">How To</a></li>
                 </ul>
             </nav>
-        </div>
+            <!-- ==============================Hamburger menu ends here==================================== -->
+
+        </div> <!-- Navbar html ends here -->
+
+
+        <!-- ======================================================================= -->
         <div class="homepage">
+            <!-- homepage div starts here and contains every item except the navbar and the footer -->
             <div class="homepageImage">
+                <!-- The div to add the hero image and the text on top of it, contains 2 main elements, the img and a division with the text tags for adding the text on top of the image -->
                 <img src="./images/homepage/4.jpg" alt="" id="slideImg">
                 <div class="text">
                     <h6 id="firstTxt">The definition of a royal ride</h6>
                     <h6 id="scndTxt">Rent your car Today!</h6>
                     <a href="reservations.html" class="linkTxt">
+                        <!-- a tag that links to the reservation page but looks like a button -->
                         <h6>Rent Car Now</h6>
                     </a>
                 </div>
-            </div>
+            </div> <!-- Homepage hero image div ends here -->
+            <!-- ======================================================================= -->
+
+
+            <!-- ========================== why-us component starts here ======================================== -->
             <div class="why-us">
+                <!-- why-us div starts here and contains 2 main divs and the second div is a parent of 3 other divs and each of those divs are parents of 2 other divs -->
                 <div class="question">
-                    <h6>With so many options out there, why us?</h6>
-                    <p>Some of our benefits</p>
+                    <h6>With so many options out there, why us?</h6> <!-- Text on top of the cards -->
+                    <p>Some of our benefits</p> <!-- Text on top of the cards -->
                 </div>
                 <div class="services">
+                    <!-- div for the cards starts here -->
                     <div class="services-item">
+                        <!-- first card item -->
                         <div class="services-item-photo"><img src="./images/homepage/savingsIcon.png" width="25px"
-                                alt="">
-                            <h6>special prices</h6>
+                                alt=""> <!-- Card item logo -->
+                            <h6>special prices</h6> <!-- Card item text on the right -->
                         </div>
                         <div>
                             <p>Using our services you are guaranteed the least-costly price available. Our company has
+                                <!-- Card item description -->
                                 ranked first in the affordability grade for the last 5 years, and we are focused on
-                                providing the very best for our customers.</p>
+                                providing the very best for our customers.
+                            </p>
                         </div>
                     </div>
                     <div class="services-item">
+                        <!-- Card item, the layout is the same for all 3 divs inside of serices class, because we want the cards to look the same -->
                         <div class="services-item-photo"><img src="./images/homepage/SafetyIcon.png" width="25px"
                                 alt="">
                             <h6>safest option</h6>
@@ -101,12 +131,18 @@
                                 go.</p>
                         </div>
                     </div>
-                </div>
+                </div> <!-- Services div ends here -->
             </div>
+            <!-- =======================why-us component ends here================= -->
 
+
+            <!-- ======================= quality of the cars component starts here=========================================== -->
             <div class="quality">
+                <!-- parent div of the quality component -->
                 <div class="car-quality" id="scnd-component">
+                    <!-- second div of the main component which is a parent of 2 divs-->
                     <div>
+                        <!-- first div that contains the text originally on the left -->
                         <div>
                             <h6>A piece of our fleet</h6>
                         </div>
@@ -116,6 +152,7 @@
                         </div>
                     </div>
                     <div>
+                        <!-- second div that contains the image and also the buttons to change the pictures through the javascript functions called -->
                         <h6 id="slideshow-buttons">
                             <div><img src="./images/homepage/fleet1.jpg" id="fleetImg" alt=""></div>
 
@@ -127,73 +164,85 @@
                     </div>
                 </div>
             </div>
+            <!-- ======================= quality of the cars component ends here=========================================== -->
+
+
+            <!-- ======================= achievments of the cars component starts here=========================================== -->
             <div class="achievments">
-                <img src="./images/homepage/5.jpg" alt="">
+                <!-- parent div that contains  -->
+                <img src="./images/homepage/5.jpg" alt=""> <!-- image added -->
                 <div class="achievment-text">
+                    <!-- parent div of 4 other divs that contain the counters and also the icons which are added through css -->
                     <div class="counter-icon">
-                        <div id="clients"></div>
+                        <!-- first counter -->
+                        <div id="clients"></div> <!-- icon added through css -->
                         <div>
-                            <h6>400,000+</h6>
+                            <h6>400,000+</h6> <!-- div and h6 tag for the clients counter -->
                         </div>
                         <div>
-                            <p>Clients Served</p>
+                            <p>Clients Served</p> <!-- div and p tag for the text -->
                         </div>
                     </div>
                     <div class="counter-icon">
-                        <div id="cities"></div>
+                        <!-- second counter -->
+                        <div id="cities"></div> <!-- icon added through css -->
                         <div>
-                            <h6>48</h6>
+                            <h6>48</h6> <!-- div and h6 tag for the clients counter -->
                         </div>
                         <div>
-                            <p>Cities</p>
-                        </div>
-                    </div>
-                    <div class="counter-icon">
-                        <div id="members"></div>
-                        <div>
-                            <h6>30,000+</h6>
-                        </div>
-                        <div>
-                            <p>Registered Members</p>
+                            <p>Cities</p><!-- div and p tag for the text -->
                         </div>
                     </div>
                     <div class="counter-icon">
-                        <div id="cars"></div>
+                        <div id="members"></div> <!-- icon added through css -->
                         <div>
-                            <h6>350+</h6>
+                            <h6>30,000+</h6> <!-- div and h6 tag for the clients counter -->
                         </div>
                         <div>
-                            <p>Available Cars</p>
+                            <p>Registered Members</p> <!-- div and p tag for the text -->
+                        </div>
+                    </div>
+                    <div class="counter-icon">
+                        <div id="cars"></div> <!-- icon added through css -->
+                        <div>
+                            <h6>350+</h6> <!-- div and h6 tag for the clients counter -->
+                        </div>
+                        <div>
+                            <p>Available Cars</p> <!-- div and p tag for the text -->
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="rent-steps-info">
+            <!-- ======================= achievments of the cars component ends here=========================================== -->
+
+
+            <!-- ======================= rent steps info component starts here=========================================== -->
+            <div class="rent-steps-info"> <!-- div added for having the text on top of the tab menu -->
                 <h6>Renting a Car has never been easier</h6>
                 <p>With no time-consuming regulations at our company you can rent a car in 15 minutes.</p>
             </div>
-            <div class="easy-booking">
-                <div class="menu">
-                    <a onclick="firstItem()">
+            <div class="easy-booking"> <!-- tab menu starts here -->
+                <div class="menu"> <!-- division for adding the tab menu options -->
+                    <a onclick="firstItem()"> <!-- functin to switch to the first menu -->
                         <div class="steps" id="step1">First Step</div>
                     </a>
-                    <a onclick="secondItem()">
+                    <a onclick="secondItem()"> <!-- second menu -->
                         <div class="steps" id="step2">Second Step</div>
                     </a>
-                    <a onclick="finalItem()">
+                    <a onclick="finalItem()"> <!-- third menu -->
                         <div class="steps" id="step3">Final Step</div>
                     </a>
                 </div>
-                <div class="easy-booking-content">
-                    <div class="easy-booking-content-item" id="item1">
-                        <div><img src="./images/homepage/locationIcon.png" width="150px" alt=""></div>
+                <div class="easy-booking-content"> <!-- div for the content below the tab menu options(contains 3 child divs) -->
+                    <div class="easy-booking-content-item" id="item1"> <!-- first item that contains 3 divs for adding the images and the text -->
+                        <div><img src="./images/homepage/locationIcon.png" width="150px" alt=""></div> <!-- image --> <!-- This applies for the child elements below -->
                         <div>
-                            <h6>Choose your pickup location</h6>
+                            <h6>Choose your pickup location</h6> <!-- main text --> <!-- This applies for the child elements below -->
                         </div>
                         <div>
                             <p>Your first step to the greatest rented car is choosing your pick up location. With
                                 our
-                                service that can be anywhere inside the country.</p>
+                                service that can be anywhere inside the country.</p> <!-- descriptive text --> <!-- This applies for the child elements below -->
                         </div>
                     </div>
                     <div class="easy-booking-content-item" id="item2">
@@ -215,35 +264,43 @@
                         <div>
                             <p>For your final step just give the final personal information and your car is booked
                                 and
-                                ready. <a href="reservations.html" id="book-final-item">Book Now &#62;</a></p>
+                                ready. <a href="reservations.html" id="book-final-item">Book Now &#62;</a></p> <!-- This contains also an "a" tag to link to the reservations page -->
 
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="contactUs">
+            <!-- ======================= rent steps info component ends here=========================================== -->
+            
+            
+            <!-- ======================= contact us component starts here=========================================== -->
+            <div class="contactUs"> <!-- parent contactUs div starts here which contains 2 child divs -->
                 <div>
-                    <img src="./images/homepage/6.jpg" alt="">
+                    <img src="./images/homepage/6.jpg" alt=""> <!-- image added -->
                 </div>
                 <div class="supportTeam">
                     <div>
-                        <h6>Our support team is available 24/7</h6>
+                        <h6>Our support team is available 24/7</h6> <!-- heading text -->
                     </div>
-                    <a href="mailto:njazia@hotmail.com" class="contact-us-link">contact us</a>
+                    <a href="mailto:njazia@hotmail.com" class="contact-us-link">contact us</a> <!-- link that acts like a button that prompts the email app of the user to send to a email address -->
                 </div>
             </div>
+            <!-- ======================= contact us component ends here=========================================== -->
+            
+            
         </div>
-        <div class="footer" style="position: absolute; background-color: rgba(0, 0, 0, 0.7);">
+        <!-- ======================= homepage div ends here and below we have the footer =========================================== -->
+        
+
+        <!-- ======================= footer starts here =========================================== -->
+        <div class="footer" style="position: absolute; background-color: rgba(0, 0, 0, 0.7);"> <!--  -->
             <!-- Added the style here because the footer.css gives the style to every page but we need this style here, and to not overload the .css files with unnecessary content -->
-            <div class="copyright">
+            <div class="copyright"> <!-- first div of the footer that contains the content to the left of the footer -->
                 <h6 class="copyrightName name"><a href="index.html">Njazia Rent A Car</a></h6>
-                <h6 class="copyrightName">&copy;2021 Njazia Rent A Car.</h6>
+                <h6 class="copyrightName">&copy;2021 Njazia Rent A Car.</h6> 
                 <h6 class="copyrightName">All Rights Reserved.</h6>
-                <h6 class="copyrightName">
-                    <a href="">Terms</a> & <a href="">Privacy</a>
-                </h6>
             </div>
-            <div class="images">
+            <div class="images"> <!-- second div that contains the content to the right, pictures and links of social medias -->
                 <a href="http://www.facebook.com" target="_blank">
                     <div class="face"></div>
                 </a>
@@ -255,20 +312,15 @@
                 </a>
             </div>
         </div>
-        <div id="butoni">
+        <div id="butoni"> <!-- div for the scroll to top button that has the picture added through css and its appearance through javascript -->
             <div id="showButton">
-                <a href="#top">
-                    <div class="toTopButtonImage"></div>
+                <a href="#top"> <!-- link that sends to the top -->
+                    <div class="toTopButtonImage"></div> <!-- empty div for the image -->
                 </a>
             </div>
         </div>
-        <!-- deri qitu -->
+        <!-- ======================= footer ends here =========================================== -->
     </div>
-
-    <!-- debugs -->
-    <!-- <div style="position: absolute; width: 100%; top: 50px;"></div> -->
-    <!-- <p style="position: absolute; top: 4000px;">Debug</p> -->
-    <!-- debugs -->
 </body>
 
 </html>
