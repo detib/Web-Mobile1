@@ -322,6 +322,7 @@ body {
 .slideshow-next-prev-buttons {
     display: flex;
     flex-direction: row !important;
+    justify-content: center;
 }
 
 .next-prev-buttons { 
@@ -623,5 +624,7 @@ body {
         display: flex;
         flex-direction: column;
     }
-    
+    .slideshow-next-prev-buttons {
+        justify-content: left;
+    }
 }
