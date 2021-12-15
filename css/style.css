@@ -300,6 +300,7 @@ body {
 .car-quality h6 {
     font-size: 2rem;
     margin: 0;
+    text-transform: uppercase;
 }
 
 .car-quality p {
