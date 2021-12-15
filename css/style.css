@@ -16,10 +16,9 @@ body {
     font-family: 'Poppins';
 }
 
-::selection {
-    background-color: transparent;
-    color: yellow;
-}
+/* ::selection {
+    background-color: white;
+} */
 
 .main {
     position: absolute;
@@ -43,10 +42,6 @@ body {
     background-color: rgba(0, 0, 0, 0);  /* background-color black */
     padding: 0 5%;  /* The padding to push elements away from the corners */
     transition: background-color 0.5s;
-}
-
-.nav-opacity {
-    background-color: rgba(0, 0, 0, 0.6);
 }
 
 .nav-logo {
@@ -118,14 +113,13 @@ body {
 .homepageImage img{
     width: 100%;
     filter: brightness(0.4);
-    /* animation: fade 1s; */
 }
 
 .text {
     position: absolute;
     width: 100%;
     left: 0;
-    top: 30%;
+    top: 330px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -137,7 +131,7 @@ body {
     margin: 0;
 }
 
-.text a {
+.linkTxt {
     text-decoration: none;
     color: white;
     background-color: #fab700;
@@ -149,7 +143,7 @@ body {
     margin-top: 50px;
 }
 
-.text a:hover {
+.linkTxt:hover {
     border: 1px solid #fab700;
     background-color: transparent;
     transform: scale(1.05);
@@ -163,18 +157,366 @@ body {
 
 #scndTxt{
     font-size: 4rem;
+    text-transform: uppercase;
 }
 
-#slideImg {
+.why-us {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 100px;
+    margin-bottom: 100px;
 }
 
-@keyframes fade {
-    0%{
-        opacity: 0.4;
-    }
-    100% {
-        opacity: 1;
-    }
+.question {
+    display: inherit;
+    flex-direction: column;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.question h6 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.question p {
+    font-size: 1.5rem;
+    color: grey;
+}
+
+.services {
+    width: 75%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.services-item {
+    width: 26%;
+    background-color: #fab700;
+    height: 300px;
+    border-radius: 15px;
+    display: inherit;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 2%;
+    box-shadow: -3px 3px 5px rgba(0, 0, 0, 0.7);
+    transition: 0.5s;
+}
+
+.services-item:hover {
+    transform: translateY(-35px) scale(1.1);
+    box-shadow: -6px 6px 25px rgba(0, 0, 0, 0.7);
+    background-color: rgb(226, 166, 0);
+}
+
+.services-item p {
+    color: white;
+}
+
+.services-item-photo {
+    display: flex;
+    align-items: baseline;
+    gap: 15px;
+    text-transform: uppercase;
+}
+.services-item-photo h6{
+    margin: 0;
+    font-size: 1.7rem;
+}
+.contactUs {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contactUs img {
+    display: block; /* For some reason the image has some space below that is not a margin or padding but by adding display:block that is fixed */
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    filter: brightness(0.7);
+}
+
+.supportTeam {
+    position: absolute;
+    display: inherit;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.supportTeam h6 {
+    font-size: 2.1rem;
+    color: white;
+    margin: 0;
+}
+
+.contact-us-link {
+    margin: 0;
+    transform: none !important;
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    background-color: #fab700;
+    text-transform: uppercase;
+    font-weight: 800;
+    padding: 25px 60px;
+    transition: 0.3s;
+    margin-bottom: 100px;
+    border: 1px solid #fab700;
+}
+
+.contact-us-link:hover {
+    transform: none !important;
+    background-color: transparent;
+    padding: 20px 35px;
+    font-size: 1.5rem;
+    color: #fab700;
+}
+
+.quality {
+    width: 60%;
+    margin: 150px 20% 100px 20%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 50px;
+}
+
+.car-quality {
+    display: flex;
+    gap: 50px;
+}
+
+.car-quality div {
+    display: flex;
+    flex-direction: column;
+}
+
+.car-quality h6 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.car-quality p {
+    font-size: 1.3rem;
+}
+
+.our-fleet-link {
+    padding: 2% 20%;
+    text-align: center;
+    width: 33%;
+    font-size: 1rem;
+    margin: 0;
+}
+
+.our-fleet-link:hover {
+    font-size: 1.1rem;
+}
+
+.slideshow-next-prev-buttons {
+    display: flex;
+    flex-direction: row !important;
+}
+
+.next-prev-buttons { 
+    /* width: 150px; */
+    padding: 0 5%;
+    color: #fab700;
+    cursor: pointer;
+}
+
+.next-prev-buttons:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+#slideshow-buttons {
+    text-align: center;
+    user-select: none;
+}
+
+#fleetImg {
+    width: 100%;
+}
+/* ===================================================
+======================Should be removed unless used=============================
+===================================================*/
+
+.whyUs {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(to bottom , white , rgb(210,210,210));
+    align-items: left;
+    width: 50%;
+    padding: 190px 25%;
+}
+
+.details p {
+    margin: 0;
+    font-size: 18px;
+}
+
+/* ===================================================
+===================================================
+===================================================*/
+
+/* Achievments division starts here and ends after the images are added */
+.achievments {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;    
+    padding: 8.3% 0;
+    text-transform: uppercase;
+    box-shadow: 5px 5px 25px black;
+}
+
+.achievments img {
+    position: absolute;
+    filter: brightness(0.3);
+    width: 100%;
+}
+
+.achievment-text {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+}
+
+.counter-icon {
+    display: inherit;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+}
+
+.counter-icon h6 {
+    font-size: 3.1rem;
+    margin: 0;
+}
+
+.counter-icon p {
+    margin: 0;
+}
+
+/* Images for the counters added through css and given the same width so they are the same size */
+#clients {
+    content: url(../images/homepage/people.png);
+    width: 15%;
+}
+
+#cities {
+    content: url(../images/homepage/citiesIcon.png);
+    width: 15%;
+}
+
+#members {
+    content: url(../images/homepage/membersIcon.png);
+    width: 15%;
+}
+
+#cars {
+    content: url(../images/homepage/carIcon.png);
+    width: 15%;
+}
+
+.easy-booking {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 10% 25%;
+    /* justify-content: center; */
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    /* gap: 10px; */
+}
+
+.menu a {
+    width: 100%;
+    cursor: pointer;
+}
+
+
+.steps {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #9e7400;
+    border-radius: 30px 30px 0 0;
+    z-index: 2000;
+    transition: 0.5s;
+}
+.menu a:hover {
+    font-size: 1.3rem;
+}
+
+.easy-booking-content {
+    display: flex;
+    position: relative;
+}
+
+.easy-booking-content-item {
+    width: 100%;
+    display: flex;
+    /* position: absolute; */
+    flex-direction: column;
+    align-items: center;
+    padding: 5% 15%;
+    background-color: #ffffff;
+    box-shadow: -15px 15px 35px -15px black;
+    border-radius: 0 0 15px 15px;
+    z-index: 0;
+}
+
+.easy-booking-content-item div {
+    text-align: center;
+}
+
+.easy-booking-content-item h6 {
+    font-size: 2.2rem;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.easy-booking-content-item p {
+    font-size: 1rem;
+    margin: 0;
+}
+
+#book-final-item {
+    color: #000;
+    text-decoration: none;
+    margin-left: 10px;
+    padding: 5px;
+}
+
+#book-final-item:hover {
+    text-decoration: underline;
+}
+
+#item1 {
+    display: none;
+}
+
+#item2 {
+    display: none;
+}
+
+#item3 {
+    display: none;
 }
 
 @media screen and (max-width: 1400px) {
@@ -184,9 +526,9 @@ body {
 
     .main {
         overflow-x: hidden; /* This is used to hide the mobile menu to the side.
-         It is on the side by the "right" property, but it overflows,
+        It is on the side by the "right" property, but it overflows,
          so, this hides that overflow making the menu seem to come from the right side out of nowhere */
-    }
+        }
 
     .nav-links {
         display: none;
@@ -202,6 +544,7 @@ body {
         content: url(../images/menu.png);
         width: 60px;
         border-radius: 5px;
+        cursor: pointer;
     }
     
     .dropbtn {
@@ -215,7 +558,7 @@ body {
         width: 200px;
         transform: translateX(200px);
         transition: transform 0.3s;
-        background-color: #542321;
+        background-color: #000;
         list-style-type: none;
         border-radius: 0 0 0 35px;
         text-align: left;
@@ -228,49 +571,42 @@ body {
     
     .dropbtn li a{
         text-decoration: none;
-        color: #818181;
+        color: #fab700;
         display: block;
         width: auto;
         padding: 8px 8px 8px 32px;
     }
-
+    
     #closeButton {
         text-align: right;
-        color: rgb(216, 216, 216);
+        color: #fab700;
+        cursor: pointer;
     }
-
-    .info {
-        display: block;
+    
+    .text {
+        top: 250px;
     }
-
-    .submit input {
-        width: 90%;
-        font-size: 10px;
-    }
-
-    .reasons {
+    
+    #frst-component {
         flex-direction: column;
-        justify-content: space-evenly;
-        height: auto;
+    }
+    #scnd-component {
+        flex-direction: column-reverse;
+    }
+    .our-fleet-link {
+        width: 20%;
+        padding: 2% 1%;
+    }
+    .services {
+        flex-direction: column;
+        align-items: center;
+    }
+    #fleetImg {
+        width: 70%;
+    }
+    #slideshow-buttons {
         display: flex;
+        flex-direction: column;
     }
-    .reason1, .reason2, .reason3 {
-        display: inherit;
-        margin: auto;
-        flex-direction: row;
-        width: 65%;
-        margin-top: 3%;
-    }
-
-    .reason1Text,.reason2Text,.reason3Text {
-        margin-left: 5%;
-    }
-
-    .reason1Text h1,.reason2Text h1,.reason3Text h1 {
-        margin-top: 0;
-    }
-
-    .reason1Image,.reason2Image,.reason3Image {
-        height: 100px;
-    }
+    
 }

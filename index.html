@@ -14,82 +14,220 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 </head>
 
-<body onload="slider(), counter()">
-    <div class="main" id="top"> <!-- id = "top" e shton qaty-->
-            <div class="navbar" id="navbar"> <!-- id = "navbar" ntnjejtin ven-->
-                <div class="nav-logo">
-                    <div class="logo">
-                        <a href="index.html" class="image"></a>
-                    </div>
-                    <div>
-                        <h6 class="name"><a href="index.html">Njazia&nbsp;Rent&nbsp;A&nbsp;Car</a></h6> <!-- &nbsp; between words so they do not break if the screen is smaller-->
-                    </div>
+<body onload="slider(), firstItem()">
+    <div class="main" id="top">
+        <!-- id = "top" e shton qaty-->
+        <div class="navbar" id="navbar">
+            <!-- id = "navbar" ntnjejtin ven-->
+            <div class="nav-logo">
+                <div class="logo">
+                    <a href="index.html" class="image"></a>
                 </div>
-                <div class="nav-links">
-                    <!-- nese nuk vyjn in the future delete extra classes -->
-                    <div class="nav-link home"><a href="index.html">Home</a></div>
-                    <div class="nav-link about"><a href="about.html">About Us</a></div>
-                    <div class="nav-link cars"><a href="cars.html">Cars</a></div>
-                    <div class="nav-link reservations"><a href="reservations.html">Reservations</a></div>
-                    <div class="nav-link how"><a href="howTo.html">How To</a></div>
-                </div>
-                <!-- width<1578px vjen qikjo -->
-                    <nav class="dropmenu">
-                        <a href="javascript:void(0);" onclick="showMenu()">
-                            <div id="menu"></div>
-                        </a>
-                        <ul id="mobileMenu" class="dropbtn">
-                            <li><a href="javascript:void(0);" onclick="closeMenu()" id="closeButton">X</a></li>
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="about.html">About Us</a></li>
-                            <li><a href="cars.html">Cars</a></li>
-                            <li><a href="reservations.html">Reservations</a></li>
-                            <li><a href="howTo.html">How To</a></li>
-                        </ul>
-                    </nav>
-                </div>
-            <div class="homepage">
-                <div class="homepageImage">
-                    <img src="./images/homepage/4.jpg" alt="" id="slideImg">
-                        <div class="text">
-                            <h6 id="firstTxt">The definition of a royal ride</h6>
-                            <h6 id="scndTxt">Rent your car Today!</h6>
-                            <a href="reservations.html" id="linkTxt">
-                                <h6>Rent Car Now</h6>
-                            </a>
-                        </div>
+                <div>
+                    <h6 class="name"><a href="index.html">Njazia&nbsp;Rent&nbsp;A&nbsp;Car</a></h6>
+                    <!-- &nbsp; between words so they do not break if the screen is smaller-->
                 </div>
             </div>
-        <h1 id="counter">500</h1>
-        <h1>abc</h1>
-        <h1>abc</h1>
-        <h1>abc</h1>
-        <h1>abc</h1>
-        <h1>abc</h1>
-        <h1>abc</h1>
-        <h1>abc</h1>
-        <h1>abc</h1>
-        <h1>abc</h1>
-        <h1>abc</h1>
-        <h1>abc</h1>
-        <h1>abc</h1>
-        <h1>abc</h1>
-        <h1>abc</h1>
-        <h1>abc</h1>
-        <h1>abc</h1>
-        <h1>abc</h1>
-        <h1>abc</h1>
-        <h1>abc</h1>
-        <h1>abc</h1>
-        <h1>abc</h1>
-        <h1>abc</h1>
-        <h1>abc</h1>
-        <h1>abc</h1>
-        <h1>abc</h1>
-        <h1>abc</h1>
-        <h1>abc</h1>
-        <h1>abc</h1>
-        <div class="footer">
+            <div class="nav-links">
+                <!-- nese nuk vyjn in the future delete extra classes -->
+                <div class="nav-link"><a href="index.html">Home</a></div>
+                <div class="nav-link"><a href="about.html">About Us</a></div>
+                <div class="nav-link"><a href="cars.html">Cars</a></div>
+                <div class="nav-link"><a href="reservations.html">Reservations</a></div>
+                <div class="nav-link"><a href="howTo.html">How To</a></div>
+            </div>
+            <!-- width<1578px vjen qikjo -->
+            <nav class="dropmenu">
+                <a onclick="showMenu()">
+                    <div id="menu"></div>
+                </a>
+                <ul id="mobileMenu" class="dropbtn">
+                    <li><a onclick="closeMenu()" id="closeButton">X</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="cars.html">Cars</a></li>
+                    <li><a href="reservations.html">Reservations</a></li>
+                    <li><a href="howTo.html">How To</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="homepage">
+            <div class="homepageImage">
+                <img src="./images/homepage/4.jpg" alt="" id="slideImg">
+                <div class="text">
+                    <h6 id="firstTxt">The definition of a royal ride</h6>
+                    <h6 id="scndTxt">Rent your car Today!</h6>
+                    <a href="reservations.html" class="linkTxt">
+                        <h6>Rent Car Now</h6>
+                    </a>
+                </div>
+            </div>
+            <div class="why-us">
+                <div class="question">
+                    <h6>With so many options out there, why us?</h6>
+                    <p>Some of our benefits</p>
+                </div>
+                <div class="services">
+                    <div class="services-item">
+                        <div class="services-item-photo"><img src="./images/homepage/savingsIcon.png" width="25px"
+                                alt="">
+                            <h6>special prices</h6>
+                        </div>
+                        <div>
+                            <p>Using our services you are guaranteed the least-costly price available. Our company has
+                                ranked first in the affordability grade for the last 5 years, and we are focused on
+                                providing the very best for our customers.</p>
+                        </div>
+                    </div>
+                    <div class="services-item">
+                        <div class="services-item-photo"><img src="./images/homepage/SafetyIcon.png" width="25px"
+                                alt="">
+                            <h6>safest option</h6>
+                        </div>
+                        <div>
+                            <p>By using our service you are doing yourself a favour. With our vehicles you won't have to
+                                worry about safety at any time. Safety is our number one priority on and off the road.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="services-item">
+                        <div class="services-item-photo"><img src="./images/homepage/timeSavingIcon.png" width="25px"
+                                alt="">
+                            <h6>time efficient</h6>
+                        </div>
+                        <div>
+                            <p>Easy and time-efficient booking at multiple points across the country and online using
+                                our website platform. No excessive time&#8209;consuming regulations, pick your car and
+                                go.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="quality">
+                <div class="car-quality" id="scnd-component">
+                    <div>
+                        <div>
+                            <h6>A piece of our fleet</h6>
+                        </div>
+                        <div>
+                            <p>Each piece of our fleet is chosen carefully with great attention to detail.</p>
+                            <a href="cars.html" class="linkTxt our-fleet-link">Our&nbsp;fleet</a>
+                        </div>
+                    </div>
+                    <div>
+                        <h6 id="slideshow-buttons">
+                            <div><img src="./images/homepage/fleet1.jpg" id="fleetImg" alt=""></div>
+
+                            <div class="slideshow-next-prev-buttons">
+                                <a onclick="prev(1)" class="next-prev-buttons">&#10094;</a>
+                                <a onclick="next(1)" class="next-prev-buttons">&#10095;</a>
+                            </div>
+                        </h6>
+                    </div>
+                </div>
+            </div>
+            <div class="achievments">
+                <img src="./images/homepage/5.jpg" alt="">
+                <div class="achievment-text">
+                    <div class="counter-icon">
+                        <div id="clients"></div>
+                        <div>
+                            <h6>400,000+</h6>
+                        </div>
+                        <div>
+                            <p>Clients Served</p>
+                        </div>
+                    </div>
+                    <div class="counter-icon">
+                        <div id="cities"></div>
+                        <div>
+                            <h6>48</h6>
+                        </div>
+                        <div>
+                            <p>Cities</p>
+                        </div>
+                    </div>
+                    <div class="counter-icon">
+                        <div id="members"></div>
+                        <div>
+                            <h6>30,000+</h6>
+                        </div>
+                        <div>
+                            <p>Registered Members</p>
+                        </div>
+                    </div>
+                    <div class="counter-icon">
+                        <div id="cars"></div>
+                        <div>
+                            <h6>350+</h6>
+                        </div>
+                        <div>
+                            <p>Available Cars</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="easy-booking">
+                <div class="menu">
+                    <a onclick="firstItem()">
+                        <div class="steps" id="step1">First Step</div>
+                    </a>
+                    <a onclick="secondItem()">
+                        <div class="steps" id="step2">Second Step</div>
+                    </a>
+                    <a onclick="finalItem()">
+                        <div class="steps" id="step3">Final Step</div>
+                    </a>
+                </div>
+                <div class="easy-booking-content">
+                    <div class="easy-booking-content-item" id="item1">
+                        <div><img src="./images/homepage/locationIcon.png" width="150px" alt=""></div>
+                        <div>
+                            <h6>Choose your pickup location</h6>
+                        </div>
+                        <div>
+                            <p>Your first step to the greatest rented car is choosing your pick up location. With our
+                                service that can be anywhere inside the country.</p>
+                        </div>
+                    </div>
+                    <div class="easy-booking-content-item" id="item2">
+                        <div><img src="./images/homepage/calendarIcon.png" width="150px" alt=""></div>
+                        <div>
+                            <h6>Choose your pickup date</h6>
+                        </div>
+                        <div>
+                            <p>The second step is choosing your pickup date. You can book your car up to two months in
+                                advance.</p>
+                        </div>
+                    </div>
+                    <div class="easy-booking-content-item" id="item3">
+                        <div><img src="./images/homepage/bookedIcon.png" width="150px" alt=""></div>
+                        <div>
+                            <h6>You are good to go</h6>
+                        </div>
+                        <div>
+                            <p>For your final step just give the final personal information and your car is booked and
+                                ready.  <a href="reservations.html" id="book-final-item">Book Now &#62;</a></p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contactUs">
+                <div>
+                    <img src="./images/homepage/6.jpg" alt="">
+                </div>
+                <div class="supportTeam">
+                    <div>
+                        <h6>Our support team is available 24/7</h6>
+                    </div>
+                    <a href="mailto:njazia@hotmail.com" class="contact-us-link">contact us</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer" style="position: absolute; background-color: rgba(0, 0, 0, 0.7);">
+            <!-- Added the style here because the footer.css gives the style to every page but we need this style here, and to not overload the .css files with unnecessary content -->
             <div class="copyright">
                 <h6 class="copyrightName name"><a href="index.html">Njazia Rent A Car</a></h6>
                 <h6 class="copyrightName">&copy;2021 Njazia Rent A Car.</h6>
@@ -110,7 +248,6 @@
                 </a>
             </div>
         </div>
-        <!-- prej qitu merre bone replace qat butonin e njejt qe ja nis prej div class buttonScroll -->
         <div id="butoni">
             <div id="showButton">
                 <a href="#top">

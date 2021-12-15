@@ -24,7 +24,7 @@ function scrollFunction() {
 }
 function navbarOpacity() {
     if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-        navbar.style.backgroundColor = "rgba(0,0,0,0.6)"
+        navbar.style.backgroundColor = "rgba(0,0,0,0.7)"
     } else {
         navbar.style.backgroundColor = "rgba(0,0,0,0)"
     }
@@ -32,7 +32,7 @@ function navbarOpacity() {
 
 var slideImg = document.getElementById("slideImg");
 
-var images = new Array (
+var images = new Array(
     "./images/homepage/1.jpg",
     "./images/homepage/2.jpg",
     "./images/homepage/4.jpg",
@@ -41,20 +41,72 @@ var images = new Array (
 var len = images.length;
 var i = 0;
 function slider() {
-    if (i>len-1){
+    if (i > len - 1) {
         i = 0;
     }
     slideImg.src = images[i];
     i++;
-    setTimeout('slider()',5000);
+    setTimeout('slider()', 5000);
 }
 
-var count = parseInt(document.getElementById("counter").value)
-var k = 0;
-function counter() {
-    if ( i < count ) {
-        i++;
-        document.getElementById("counter").innerText = i;
-        setTimeout('counter()', 50)        
+var fleetImages = new Array(
+    "./images/homepage/fleet1.jpg",
+    "./images/homepage/fleet3.jpg",
+    "./images/homepage/fleet2.jpg",
+    "./images/homepage/fleet4.jpg"
+)
+var fleetImg = document.getElementById("fleetImg");
+var fleetImagesLen = fleetImages.length;
+var o = 0;
+function slideShow(){
+    if(o>fleetImagesLen-1){
+        o=0;
+    } else if(o<0){
+        o = 3;
     }
+    fleetImg.src = fleetImages[o];
+}
+function next(k){
+    slideShow(o += k);
+}
+function prev(k){
+    slideShow(o -= k);
+}
+
+var itemTabMenu1 = document.getElementById("item1");
+var itemTabMenu2 = document.getElementById("item2");
+var itemTabMenu3 = document.getElementById("item3");
+
+var stepTabMenu1 = document.getElementById("step1");
+var stepTabMenu2 = document.getElementById("step2");
+var stepTabMenu3 = document.getElementById("step3");
+function firstItem() {
+    itemTabMenu1.style.display = "block";
+    stepTabMenu1.style.backgroundColor = "#fab700"
+
+    itemTabMenu2.style.display = "none";
+    stepTabMenu2.style.backgroundColor = "#9e7400"
+
+    itemTabMenu3.style.display = "none";
+    stepTabMenu3.style.backgroundColor = "#9e7400"
+}
+function secondItem() {
+    itemTabMenu1.style.display = "none";
+    stepTabMenu1.style.backgroundColor = "#9e7400"
+
+    itemTabMenu2.style.display = "block";
+    stepTabMenu2.style.backgroundColor = "#fab700"
+
+    itemTabMenu3.style.display = "none";
+    stepTabMenu3.style.backgroundColor = "#9e7400"
+}
+function finalItem() {
+    itemTabMenu1.style.display = "none";
+    stepTabMenu1.style.backgroundColor = "#9e7400"
+
+    itemTabMenu2.style.display = "none";
+    stepTabMenu2.style.backgroundColor = "#9e7400"
+
+    itemTabMenu3.style.display = "block";
+    stepTabMenu3.style.backgroundColor = "#fab700"
 }

@@ -24,7 +24,7 @@ html {
     height: 60px;
     width: 90%;
     padding: 2% 5%;
-    background: linear-gradient(to bottom, black, rgb(61, 61, 61));
+    background-color: rgba(0, 0, 0, 1);
     align-items: center;
 }
 .copyright {
@@ -63,7 +63,7 @@ html {
     /* display: none; */
     position: fixed;
     bottom: 140px;
-    right: 20px;
+    right: 50px;
     margin: 0;
     padding: 0;
     width: 30px;
@@ -76,8 +76,8 @@ html {
     content: url(../images/arrowup.png);
     margin: 0;
     padding: 0;
-    width: 30px;
-    height: 30px;
+    width: 60px;
+    height: 60px;
     cursor: pointer;
 }
 
