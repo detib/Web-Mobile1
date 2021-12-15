@@ -128,7 +128,11 @@ in this case the ::before and ::after pseudo elements add an underline and overl
     display: block;
     background: white;
     transition: 0.3s;
-    margin: auto;
+    /* margin: auto; */
+}
+
+.nav-link a::before {
+    margin-left: auto; /* this makes the line above come from the right as originally the content: '' is pushed to the right */
 }
 
 .nav-link a:hover::after, .nav-link a:hover::before {
@@ -536,16 +540,19 @@ in this case the ::before and ::after pseudo elements add an underline and overl
     display: inherit; /*  */
     flex-direction: column; /*  */
     align-items: center; /*  */
-    gap: 20px; /* 20px gap between flex-items which are displayed in a column flex-direction */
+     /* 20px gap between flex-items which are displayed in a column flex-direction */
 }
 
 .supportTeam h6 {
     font-size: 2.1rem; /* font size in rems */
     color: white; /*  */
-    margin: 0; /*  */
+    margin: auto; /*  */
+    margin-bottom: 40%;
 }
 
 .contact-us-link {
+    position: absolute;
+    top: 30%;
     margin: 0; /*  */
     transform: none !important; /* transform is set to none and also it is labeled as !important so that this element takes this property */
     text-decoration: none; /*  */
@@ -556,14 +563,13 @@ in this case the ::before and ::after pseudo elements add an underline and overl
     font-weight: 800; /* 100 more than "bold" */
     padding: 25px 60px; /* 25px padding on top and bottom and 60px left and right */
     transition: 0.3s; /* all transitions happen within 300ms */
-    margin-bottom: 100px; /* adds a 100px margin at the bottom */
     border: 1px solid #fab700; /*  */
 }
 
 .contact-us-link:hover {
     transform: none !important; /* transform is set to none and also it is labeled as !important so that this element takes this property */
     background-color: transparent; /* background color on hover is changed to transparent */
-    padding: 20px 35px; /* we change the padding so that when the font-size changes it does not grow the box */
+     /* we change the padding so that when the font-size changes it does not grow the box */
     font-size: 1.5rem; /* font size in rems */
     color: #fab700; /* text-color on hover */
 }
@@ -681,5 +687,9 @@ This means that if a screen is 1400px or lower these properties will take place.
     }
     .slideshow-next-prev-buttons {
         justify-content: left; /* move the buttons that change the images on the slideshow to the left so they do not look out of place */
+    }
+
+    .contact-us-link {
+        padding: 10px;
     }
 }
