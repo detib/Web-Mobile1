@@ -20,6 +20,7 @@ html,body,::selection, .main, styles below
 html declares the font-size for all the page, in this case we declare font size with "rem",
 1 rem is equal to the font-size of the parent element, in this case 1 rem is 16px and 5rems are 80px,
 we use rems because it is easier to make the page responsive since we can change the whole pages font-size with 1 change in font-size in html tag
+::selection is changed to -webkit-text-stroke so that any content that is selectable will take that property
 body changes the font-family to poppins, which is also imported
 .main positions the page to each corner 
 so we do not have white space above and to the left of the page
